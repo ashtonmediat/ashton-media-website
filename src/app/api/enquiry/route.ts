@@ -88,7 +88,7 @@ export async function POST(req: Request) {
   const { text, html } = render(enquiry);
 
   const key = process.env.RESEND_API_KEY;
-  const to = (process.env.ENQUIRY_TO || site.email).split(",").map((s) => s.trim());
+  const to = (process.env.ENQUIRY_TO || site.enquiryEmail).split(",").map((s) => s.trim());
   const from = process.env.ENQUIRY_FROM || "Ashton Media website <enquiries@notify.ashtonmedia.net>";
 
   if (!key) {

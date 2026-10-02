@@ -21,6 +21,7 @@ export const site = {
       `https://wa.me/255758880088${text ? `?text=${encodeURIComponent(text)}` : ""}`,
   },
   email: "contact@ashtonmedia.net",
+  enquiryEmail: "info@ashtonmedia.net", // where website forms are delivered
   address: {
     street: "Plot No. 4, New Bagamoyo Road",
     city: "Dar es Salaam",
