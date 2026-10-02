@@ -61,6 +61,26 @@
       "permanent": true
     },
     {
+      "source": "/tanzania",
+      "destination": "https://www.ashtonmedia.net/advertising-in-tanzania/",
+      "permanent": true
+    },
+    {
+      "source": "/tanzania/",
+      "destination": "https://www.ashtonmedia.net/advertising-in-tanzania/",
+      "permanent": true
+    },
+    {
+      "source": "/tanzania/:path*",
+      "destination": "https://www.ashtonmedia.net/advertising-in-tanzania/",
+      "permanent": true
+    },
+    {
+      "source": "/tanzania/:path*/",
+      "destination": "https://www.ashtonmedia.net/advertising-in-tanzania/",
+      "permanent": true
+    },
+    {
       "source": "/insights",
       "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true

@@ -16,6 +16,11 @@ export const redirectMap: { from: string; to: string }[] = [
   { from: "/blog/previous/:page", to: "/blog/" },
   { from: "/1/post/:year/:month/:slug.html", to: "/blog/" },
 
+  // Google Ads display path seen live on 2 Oct 2026 (ashtonmedia.net/tanzania/ad…). A display path
+  // need not exist, but if any ad's final URL really uses it, the click must not land on a 404.
+  { from: "/tanzania", to: "/advertising-in-tanzania/" },
+  { from: "/tanzania/:path*", to: "/advertising-in-tanzania/" },
+
   // Addresses that existed briefly on the first version of this site (2 Oct 2026)
   { from: "/insights", to: "/blog/" },
   { from: "/insights/:slug", to: "/blog/:slug/" },
