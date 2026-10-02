@@ -20,7 +20,7 @@ export const site = {
     url: (text?: string) =>
       `https://wa.me/255758880088${text ? `?text=${encodeURIComponent(text)}` : ""}`,
   },
-  email: "contact@ashtonmedia.net",
+  email: "info@ashtonmedia.net",
   enquiryEmail: "info@ashtonmedia.net", // where website forms are delivered
   address: {
     street: "Plot No. 4, New Bagamoyo Road",
