@@ -171,14 +171,14 @@
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/:path(.*)",
       "has": [
         {
           "type": "host",
           "value": "ashtonmedia.net"
         }
       ],
-      "destination": "https://www.ashtonmedia.net/:path*",
+      "destination": "https://www.ashtonmedia.net/:path",
       "permanent": true
     }
   ]

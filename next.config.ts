@@ -1,15 +1,28 @@
 import type { NextConfig } from "next";
 import { redirectMap } from "./src/content/redirects";
+import { site } from "./src/content/site";
+
+const canonicalHost = new URL(site.url).host; // www.ashtonmedia.net
+const bareHost = canonicalHost.replace(/^www\./, "");
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
   async redirects() {
-    return redirectMap.map((r) => ({
-      source: r.from,
-      destination: r.to,
-      permanent: true,
-    }));
+    return [
+      // One canonical host: the bare domain always sends people (and Google) to www.
+      {
+        source: "/:path(.*)",
+        has: [{ type: "host", value: bareHost }],
+        destination: `${site.url}/:path`,
+        permanent: true,
+      },
+      ...redirectMap.map((r) => ({
+        source: r.from,
+        destination: r.to,
+        permanent: true,
+      })),
+    ];
   },
   async headers() {
     return [

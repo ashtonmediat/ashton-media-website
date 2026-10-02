@@ -20,7 +20,7 @@ const legacy = redirectMap.flatMap((r) => {
 // (destinations are absolute on the www host); then everything else on the bare host → www.
 const redirects = [
   ...legacy.map((r) => ({ ...r, destination: `${site.url}${r.destination}` })),
-  { source: "/:path*", has: [{ type: "host", value: bareHost }], destination: `${site.url}/:path*`, permanent: true },
+  { source: "/:path(.*)", has: [{ type: "host", value: bareHost }], destination: `${site.url}/:path`, permanent: true },
 ];
 const json = { redirects };
 writeFileSync(new URL("../vercel.json", import.meta.url), JSON.stringify(json, null, 2) + "\n");
