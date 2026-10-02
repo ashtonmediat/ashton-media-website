@@ -91,9 +91,8 @@ export default async function FormatPage({ params }: { params: Promise<{ slug: s
             <ul className="rows mt-8 border-t border-b border-rule">
               {posts.map((p) => p && (
                 <li key={p.slug}>
-                  <Link href={`/blog/${p.slug}/`} className="group grid gap-2 py-5 md:grid-cols-12 md:items-baseline">
-                    <time dateTime={p.date} className="text-sm text-steel md:col-span-2">{new Date(p.date).toLocaleDateString("en-GB", { month: "short", year: "numeric" })}</time>
-                    <span className="display-md text-lg md:col-span-10 group-hover:underline underline-offset-4">{p.title}</span>
+                  <Link href={`/blog/${p.slug}/`} className="group block py-5">
+                    <span className="display-md text-lg group-hover:underline underline-offset-4">{p.title}</span>
                   </Link>
                 </li>
               ))}

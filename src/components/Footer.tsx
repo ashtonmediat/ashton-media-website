@@ -11,7 +11,7 @@ const cols = [
       { label: "Static billboards", href: "/static-billboards-tanzania/" },
       { label: "Airport advertising", href: "/airport-advertising-tanzania/" },
       { label: "Malls and retail", href: "/mall-advertising-dar-es-salaam/" },
-      { label: "3D screens", href: "/3d-billboard-tanzania/" },
+      { label: "SGR advertising", href: "/sgr-advertising-tanzania/" },
     ],
   },
   {

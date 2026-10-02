@@ -91,6 +91,16 @@
       "permanent": true
     },
     {
+      "source": "/3d-billboard-tanzania",
+      "destination": "/digital-billboards-tanzania/",
+      "permanent": true
+    },
+    {
+      "source": "/3d-billboard-tanzania/",
+      "destination": "/digital-billboards-tanzania/",
+      "permanent": true
+    },
+    {
       "source": "/work/tanzanias-first-3d-screen",
       "destination": "/blog/unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen/",
       "permanent": true

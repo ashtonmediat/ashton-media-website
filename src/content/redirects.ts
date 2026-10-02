@@ -20,6 +20,7 @@ export const redirectMap: { from: string; to: string }[] = [
   { from: "/insights", to: "/blog/" },
   { from: "/insights/:slug", to: "/blog/:slug/" },
   { from: "/work", to: "/blog/" },
+  { from: "/3d-billboard-tanzania", to: "/digital-billboards-tanzania/" },
   { from: "/work/tanzanias-first-3d-screen", to: "/blog/unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen/" },
   { from: "/work/vodacom-screen-placement", to: "/blog/how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania/" },
   { from: "/work/circle-k-retail-digital-signage", to: "/blog/transforming-retail-spaces-with-digital-signage-by-ashton-media/" },

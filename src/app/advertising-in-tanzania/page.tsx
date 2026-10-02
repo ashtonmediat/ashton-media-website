@@ -26,7 +26,7 @@ const faqs = [
 ];
 
 export default function InternationalPage() {
-  const launches = ["pepsi-logo-launch-with-ashton-media", "simple-yet-viral-outdoor-ad-strategy-by-tecno", "transforming-retail-spaces-with-digital-signage-by-ashton-media"].map(getPost).filter(Boolean);
+  const launches = ["pepsi-logo-launch-with-ashton-media", "simple-yet-viral-outdoor-ad-strategy-by-tecno", "how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania"].map(getPost).filter(Boolean);
   return (
     <>
       <JsonLd data={faqLd(faqs)} />
@@ -61,13 +61,12 @@ export default function InternationalPage() {
                 <p className="measure-wide">Proof when it is live: photographs of every static posting and proof of play for every screen.</p>
               </div>
               <h2 className="display-md mt-12 text-2xl md:text-3xl">Brands that have launched with us</h2>
-              <p className="measure-wide mt-4 text-steel">{clients.join(", ")}.</p>
+              <p className="measure-wide mt-4 text-steel">{clients.join(", ")} and many more.</p>
               <ul className="rows mt-6 border-t border-b border-rule">
                 {launches.map((p) => p && (
                   <li key={p.slug}>
-                    <Link href={`/blog/${p.slug}/`} className="group grid gap-2 py-5 md:grid-cols-12 md:items-baseline">
-                      <time dateTime={p.date} className="text-sm text-steel md:col-span-2">{new Date(p.date).getFullYear()}</time>
-                      <span className="display-md text-lg md:col-span-10 group-hover:underline underline-offset-4">{p.title}</span>
+                    <Link href={`/blog/${p.slug}/`} className="group block py-5">
+                      <span className="display-md text-lg group-hover:underline underline-offset-4">{p.title}</span>
                     </Link>
                   </li>
                 ))}
@@ -79,7 +78,7 @@ export default function InternationalPage() {
                 <ul className="mt-4 space-y-3 text-sm">
                   <li><strong>Award-winning</strong> — including the DailyDOOH award in London</li>
                   <li><strong>The largest digital screen network</strong> in Tanzania</li>
-                  <li><strong>Airport advertising</strong> at Dar es Salaam’s international airport</li>
+                  <li><strong>Airports and rail</strong> — JNIA, Kilimanjaro, Arusha, Mwanza, Dodoma and the SGR terminals</li>
                   <li><strong>Tanzania’s first 3D screen</strong>, Mlimani City</li>
                   <li><strong>Permits, production and installation</strong> by our own team</li>
                 </ul>

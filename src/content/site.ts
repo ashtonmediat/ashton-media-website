@@ -35,7 +35,6 @@ export const site = {
     instagram: "https://www.instagram.com/ashton.digital.network/",
     facebook: "https://www.facebook.com/ashtonmedia/",
   },
-  networkName: "ADN — Ashton Digital Network",
 } as const;
 
 export type City = {
@@ -54,11 +53,14 @@ export const cities: City[] = [
 
 export const clients = [
   "Coca-Cola",
-  "Vodacom Tanzania",
-  "KFC",
   "Pepsi",
+  "Vodacom Tanzania",
+  "Samsung",
+  "Apple",
   "TECNO",
-  "Circle K",
+  "KFC",
+  "Bolt",
+  "Yas",
 ] as const;
 
 export type Award = {
@@ -105,7 +107,6 @@ export const timeline = [
   { when: "2018", what: "DailyDOOH Gala Award, London — Most Innovative Use of Technology, for the 3D Digital Coke Bottle." },
   { when: "2023", what: "Consumer Choice Awards Africa — Most Creative and Convenient Digital Advertising (Billboard) Company in Tanzania." },
   { when: "January 2024", what: "Tanzania's first 3D screen goes live at the main entrance of Mlimani City, with four UHD screens inside the mall." },
-  { when: "February 2024", what: "Digital signage for Circle K's first Tanzanian store, at the Puma station on Obama Drive." },
   { when: "March 2024", what: "KFC's Countdown to Iftar: live, data-driven countdowns across the digital network during Ramadan." },
   { when: "April 2024", what: "Chole Junction, Masaki, upgraded to a larger screen." },
   { when: "July 2024", what: "Pepsi's new logo launched on a combined static and digital build." },

@@ -21,7 +21,10 @@ before or shortly after launch. Each points at the file to edit.
 | 2024 Consumer Choice Awards category wording | `src/content/site.ts` (`awards`) | Exact 2024 wording to confirm |
 | Company founded 2005 | about, schema | ZoomTanzania/TechBehemoths say 2005; Tanzapages shows 2012 registration — reconcile |
 | Blog posts marked `partial: true` | `src/content/posts.ts` | Completed from recovered excerpts in the company's voice; restore the originals from the Internet Archive copy if preferred |
-| Mobile LED screens page — what the truck does, where it can go, sound | `src/content/formats.ts` (mobile-screens-tanzania) | Written from the photograph of the ADN truck only; confirm the service details |
+| Mobile LED screens page — what the truck does, where it can go, sound | `src/content/formats.ts` (mobile-screens-tanzania) | Written from the photograph of the truck only; confirm the service details |
+| SGR page — terminals in Dar es Salaam, Morogoro, Dodoma; "exclusive advertising spaces" | `src/content/formats.ts` (sgr-advertising-tanzania) | Text taken from the company's transit deck (Abbas, 2 Oct); photos are the two WhatsApp images — send the originals for sharper heroes |
+| Airports list — JNIA T3, Kilimanjaro, Arusha, Mwanza, Dodoma | airport page, international page, SGR page | From Abbas and the transit deck, 2 Oct |
+| Client list — Coca-Cola, Pepsi, Vodacom, Samsung, Apple, TECNO, KFC, Bolt, Yas | `src/content/site.ts` (`clients`) | Names given by Abbas, 2 Oct; no logos until permission is confirmed |
 | Logo | `public/brand/ashton-logo*.png` | Cut from the design mockup at 489×117 px; replace with the vector logo (same file names, PNG or SVG) |
 | Photo captions / alt text | `src/app/page.tsx`, format pages | Describe what the photographs show; correct any site names |
 

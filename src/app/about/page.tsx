@@ -23,7 +23,7 @@ export default function AboutPage() {
               <h1 className="display text-[2.4rem] sm:text-5xl lg:text-6xl">Putting brands in front of Tanzania</h1>
               <p className="measure-wide mt-6 text-lg text-white/85">
                 Ashton Media Limited is an award-winning out-of-home media owner based in Dar es Salaam. It runs the
-                country’s largest digital screen network — ADN, the Ashton Digital Network — alongside static billboards,
+                country’s largest digital screen network alongside static billboards,
                 airport advertising, and the screens at Mlimani City. One team handles sites, permits, production,
                 installation and reporting.
               </p>
@@ -48,16 +48,9 @@ export default function AboutPage() {
             </div>
             <div className="lg:col-span-5">
               <div className="frame p-5 md:p-6">
-                <h2 className="display-md text-lg">Two names, one company</h2>
-                <p className="mt-3 text-steel">
-                  Ashton Media is the company. ADN — Ashton Digital Network — is the name of its digital screen network,
-                  which is why our Instagram and Facebook carry the ADN name. Static billboards, the airport and the malls are Ashton Media.
-                </p>
-              </div>
-              <div className="frame mt-6 p-5 md:p-6">
                 <h2 className="display-md text-lg">Who we work for</h2>
                 <p className="mt-3 text-steel">
-                  {clients.join(", ")}, and the Tanzanian banks, telcos, retailers and agencies that plan on the network every month.
+                  {clients.join(", ")} and many more — along with the Tanzanian banks, telcos, retailers and agencies that plan on the network every month.
                 </p>
                 <p className="mt-3">
                   <Link href="/blog/" className="font-bold underline underline-offset-4">Campaign stories on the blog</Link>

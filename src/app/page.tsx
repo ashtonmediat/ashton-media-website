@@ -73,7 +73,7 @@ export default function HomePage() {
           <p className="text-white/80">Also on the network:</p>
           <div className="mt-4 flex flex-wrap justify-center gap-3">
             <Link href="/mall-advertising-dar-es-salaam/" className="nav-box">Malls &amp; retail</Link>
-            <Link href="/3d-billboard-tanzania/" className="nav-box">3D screens</Link>
+            <Link href="/sgr-advertising-tanzania/" className="nav-box">SGR</Link>
             <Link href="/billboards-in-tanzania/" className="nav-box nav-box-fill">The whole network</Link>
           </div>
         </div>

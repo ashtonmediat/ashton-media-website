@@ -32,7 +32,6 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   const p = getPost(slug);
   if (!p) notFound();
   const more = postsByDate.filter((o) => o.slug !== p.slug).slice(0, 3);
-  const date = new Date(p.date).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
 
   return (
     <>
@@ -41,8 +40,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         <header className="border-b-[3px] border-black">
           <div className="mx-auto max-w-7xl px-4 pt-8 pb-10 md:px-8 md:pt-10 md:pb-14">
             <Breadcrumbs items={[{ name: "Blog", path: "/blog/" }, { name: p.title, path: `/blog/${p.slug}/` }]} />
-            <time dateTime={p.date} className="mt-6 block text-sm text-steel">{date}</time>
-            <h1 className="display mt-3 text-[2.2rem] sm:text-4xl lg:text-5xl">{p.title}</h1>
+            <h1 className="display mt-6 text-[2.2rem] sm:text-4xl lg:text-5xl">{p.title}</h1>
             <p className="measure-wide mt-5 text-lg text-steel">{p.excerpt}</p>
           </div>
         </header>
@@ -72,9 +70,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           <ul className="rows mt-8 border-t border-b border-rule">
             {more.map((o) => (
               <li key={o.slug}>
-                <Link href={`/blog/${o.slug}/`} className="group grid gap-2 py-5 md:grid-cols-12">
-                  <time dateTime={o.date} className="text-sm text-steel md:col-span-2">{new Date(o.date).getFullYear()}</time>
-                  <span className="display-md text-lg md:col-span-10 group-hover:underline underline-offset-4">{o.title}</span>
+                <Link href={`/blog/${o.slug}/`} className="group block py-5">
+                  <span className="display-md text-lg group-hover:underline underline-offset-4">{o.title}</span>
                 </Link>
               </li>
             ))}

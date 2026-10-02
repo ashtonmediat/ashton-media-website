@@ -20,10 +20,10 @@ const faqs = [
   { q: "Who are the billboard companies in Tanzania?", a: "Ashton Media is an award-winning out-of-home media owner based in Dar es Salaam, with the country's largest digital screen network, static billboards, airport advertising and the screens at Mlimani City." },
   { q: "How much does a billboard cost in Tanzania?", a: "It depends on the format, the location and the length of the booking. A digital screen slot in Dar es Salaam, a static billboard on a main road and the airport are priced differently. Send a brief and you'll have a quote with options, or read what drives the price on our cost guide." },
   { q: "Which cities do you cover?", a: "Dar es Salaam, Zanzibar, Dodoma and Mwanza, with the largest share of the network on the main roads of Dar es Salaam. Other towns are quoted on request." },
-  { q: "Do you offer digital billboards?", a: "Yes. ADN — Ashton Digital Network — is Tanzania's largest digital out-of-home network, including Selander Bridge, Chole Junction and the 3D screen at Mlimani City." },
+  { q: "Do you offer digital billboards?", a: "Yes. Ashton runs Tanzania's largest digital out-of-home network, including Selander Bridge, Chole Junction, Nyerere Road, Bagamoyo Road and the 3D screen at Mlimani City." },
   { q: "Can you handle printing and installation?", a: "Yes. For static sites we quote the whole job: site, print, installation and a photograph of the posting." },
   { q: "How do I book a billboard?", a: "Send a two-minute brief on this site, WhatsApp us, or call +255 758 880 088. We reply with the sites that fit, photographs and a quote." },
-  { q: "Do you work with international brands and agencies?", a: "Yes. International brands enter Tanzania through us because one team handles sites, production, permits and installation. Coca-Cola, Pepsi, KFC, TECNO and Vodacom have run campaigns on the network." },
+  { q: "Do you work with international brands and agencies?", a: "Yes. International brands enter Tanzania through us because one team handles sites, production, permits and installation. Coca-Cola, Pepsi, Samsung, Apple, Vodacom, TECNO, KFC, Bolt and Yas have all run campaigns on the network." },
   { q: "Can I see photographs of the sites before booking?", a: "Yes. Every proposal comes with photographs and locations." },
 ];
 
@@ -90,9 +90,9 @@ export default function HubPage() {
                 <ul className="mt-4 space-y-3">
                   <li><strong>Award-winning.</strong> Recognised by the industry internationally and voted for at home.</li>
                   <li><strong>The largest digital network</strong> in Tanzania, with day-parting and live data.</li>
-                  <li><strong>Every format</strong> — digital, static, airport, malls, retail and 3D — from one team.</li>
+                  <li><strong>Every format</strong> — digital, static, airport, SGR, mobile, malls and retail — from one team.</li>
                   <li><strong>Firsts.</strong> Tanzania’s first 3D screen.</li>
-                  <li><strong>Proof.</strong> {clients.join(", ")}.</li>
+                  <li><strong>Proof.</strong> {clients.join(", ")} and many more.</li>
                 </ul>
               </div>
             </div>

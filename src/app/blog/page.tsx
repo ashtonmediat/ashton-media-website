@@ -7,7 +7,7 @@ import { postsByDate } from "@/content/posts";
 export const metadata = pageMeta({
   title: "Blog: Outdoor Advertising in Tanzania | Ashton Media",
   description:
-    "News and ideas from Ashton Media: campaigns for KFC, Pepsi, TECNO and Vodacom, Tanzania's first 3D screen, and how to get more from billboards and digital screens.",
+    "News and ideas from Ashton: campaign stories, new screens, and how to get more from billboards and digital screens in Tanzania.",
   path: "/blog/",
 });
 
@@ -28,14 +28,9 @@ export default function BlogIndex() {
           <ul className="rows border-t border-b border-rule">
             {postsByDate.map((p) => (
               <li key={p.slug}>
-                <Link href={`/blog/${p.slug}/`} className="group grid gap-2 py-6 md:grid-cols-12">
-                  <time dateTime={p.date} className="text-sm text-steel md:col-span-2">
-                    {new Date(p.date).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}
-                  </time>
-                  <span className="md:col-span-10">
-                    <span className="display-md block text-xl group-hover:underline underline-offset-4">{p.title}</span>
-                    <span className="measure-wide mt-2 block text-steel">{p.excerpt}</span>
-                  </span>
+                <Link href={`/blog/${p.slug}/`} className="group block py-6">
+                  <span className="display-md block text-xl group-hover:underline underline-offset-4">{p.title}</span>
+                  <span className="measure-wide mt-2 block text-steel">{p.excerpt}</span>
                 </Link>
               </li>
             ))}

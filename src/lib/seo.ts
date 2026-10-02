@@ -41,7 +41,7 @@ export const organizationLd = {
   "@id": `${SITE_URL}/#organization`,
   name: site.name,
   legalName: site.legalName,
-  alternateName: ["Ashton", "ADN", "Ashton Digital Network", "Ashton Media Tanzania"],
+  alternateName: ["Ashton", "Ashton Media Tanzania"],
   url: SITE_URL,
   foundingDate: String(site.founded),
   telephone: site.phone.e164,

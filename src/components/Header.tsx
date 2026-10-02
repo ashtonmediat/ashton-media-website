@@ -17,7 +17,7 @@ export const menuItems = [
   { label: "Airport advertising", href: "/airport-advertising-tanzania/" },
   { label: "Mobile screens", href: "/mobile-screens-tanzania/" },
   { label: "Malls & retail", href: "/mall-advertising-dar-es-salaam/" },
-  { label: "3D screens", href: "/3d-billboard-tanzania/" },
+  { label: "SGR advertising", href: "/sgr-advertising-tanzania/" },
   { label: "Rates and how to book", href: "/rates-and-booking/" },
   { label: "What a billboard costs", href: "/billboard-advertising-cost-tanzania/" },
   { label: "International brands", href: "/advertising-in-tanzania/" },
