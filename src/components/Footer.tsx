@@ -10,8 +10,9 @@ const cols = [
       { label: "Digital screens", href: "/digital-billboards-tanzania/" },
       { label: "Static billboards", href: "/static-billboards-tanzania/" },
       { label: "Airport advertising", href: "/airport-advertising-tanzania/" },
-      { label: "Malls and retail", href: "/mall-advertising-dar-es-salaam/" },
       { label: "SGR advertising", href: "/sgr-advertising-tanzania/" },
+      { label: "Malls and retail", href: "/mall-advertising-dar-es-salaam/" },
+      { label: "Mobile screens", href: "/mobile-screens-tanzania/" },
     ],
   },
   {

@@ -139,73 +139,6 @@ export const formats: FormatPage[] = [
     cta: { label: "Ask about airport advertising", whatsapp: "Hi Ashton Media, I'm interested in airport advertising. Please send the placement map and rates." },
   },
   {
-    slug: "mobile-screens-tanzania",
-    nav: "Mobile screens",
-    short: "An LED screen on wheels: take the message to the market, the stadium, the launch — wherever the audience is that day.",
-    title: "Mobile LED Screen Advertising in Tanzania | Ashton Media",
-    description:
-      "Mobile LED screen trucks from Ashton: a digital billboard that goes where the audience is — events, markets, launches and roadshows across Tanzania.",
-    h1: "Mobile LED screens",
-    lead:
-      "Some audiences don't pass a fixed site. A mobile LED screen on a truck takes a full digital billboard to them — the market on market day, the stadium on match day, the roadshow as it moves from town to town — and parks where a brand needs to be seen.",
-    sections: [
-      {
-        heading: "What a mobile screen is for",
-        body: [
-          "Launches and activations, where the screen becomes the stage. Events, where it carries the sponsor's message to the crowd. Promotions that move: a route through the city over a day, or a roadshow upcountry over a week.",
-          "The screen runs the same creative as the fixed network — stills or video — so a campaign can start on the roads and arrive at the event on the same screen.",
-        ],
-      },
-      {
-        heading: "How it is booked",
-        body: [
-          "Tell us the dates, the places and the hours. We plan the route, handle the permits and the crew, and send photographs from each stop.",
-        ],
-      },
-    ],
-    faqs: [
-      { q: "Where can the mobile screen go?", a: "Anywhere a truck can park: markets, stadiums, event venues, shopping streets and towns upcountry. Tell us the places and the dates and we plan the route." },
-      { q: "Can it run video?", a: "Yes. The screen runs stills or video, with sound where the venue allows it." },
-      { q: "Can I combine it with fixed sites?", a: "Yes — the same creative can run on the digital network and arrive at your event on the mobile screen." },
-    ],
-    cta: { label: "Ask about the mobile screen", whatsapp: "Hi Ashton Media, I'm interested in the mobile LED screen. Please send details and rates." },
-  },
-  {
-    slug: "mall-advertising-dar-es-salaam",
-    nav: "Malls & retail",
-    short: "Screens at the entrance and through the mall, and digital signage inside stores. Reach shoppers at the moment of decision.",
-    title: "Mall Advertising in Dar es Salaam | Ashton Media",
-    description:
-      "Mall and retail advertising in Dar es Salaam: screens at the entrance of Mlimani City and through the mall, and digital signage inside retail spaces.",
-    h1: "Mall and retail advertising in Dar es Salaam",
-    lead:
-      "A mall is where people arrive ready to buy. Ashton Media's screens at Mlimani City — Dar es Salaam's busiest mall — greet shoppers at the door and follow them to the shop, and its retail digital signage carries a brand right onto the shop floor.",
-    sections: [
-      {
-        heading: "The Mlimani City network",
-        body: [
-          "A screen at the main entrance is the first thing a visitor sees — it is also Tanzania's first 3D screen. Inside, four Ultra-HD screens in the highest-traffic positions continue the message.",
-          "Vodacom Tanzania's device-financing campaign used the whole network to carry one story from the entrance to the point of purchase.",
-        ],
-      },
-      {
-        heading: "Retail digital signage",
-        body: [
-          "Beyond the mall, Ashton installs and runs digital signage inside retail spaces — supermarkets, fuel stations, showrooms — with promotions, products and brand content updated without a reprint.",
-          "If you own a retail space and want a screen network in it, or you are a brand that wants to be on one, talk to us.",
-        ],
-      },
-    ],
-    related: ["how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania", "unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen"],
-    faqs: [
-      { q: "Which malls can I advertise in?", a: "Mlimani City in Dar es Salaam, with a screen at the main entrance and four UHD screens inside. Ask about other locations — the network grows." },
-      { q: "Can I advertise inside Mlimani City without the entrance screen?", a: "Yes. The four UHD screens inside the mall can be booked on their own." },
-      { q: "Do you install screens in shops and petrol stations?", a: "Yes. Ashton designs, installs and runs digital signage in retail spaces." },
-      { q: "What creative do mall screens take?", a: "A still or a short video to the screen's specification. The entrance screen can also run 3D creative, which we can produce with you." },
-    ],
-    cta: { label: "Ask about mall advertising", whatsapp: "Hi Ashton Media, I'm interested in mall and retail screens. Please send details and rates." },
-  },
-  {
     slug: "sgr-advertising-tanzania",
     nav: "SGR",
     short: "Digital screens and static sites inside the SGR terminals in Dar es Salaam, Morogoro and Dodoma — passengers with time to look.",
@@ -256,6 +189,73 @@ export const formats: FormatPage[] = [
       { name: "sgr-security-entrance", alt: "A digital screen at the security entrance of the SGR terminal" },
     ],
     cta: { label: "Ask about SGR advertising", whatsapp: "Hi Ashton Media, I'm interested in advertising at the SGR terminals. Please send the placement map and rates." },
+  },
+  {
+    slug: "mall-advertising-dar-es-salaam",
+    nav: "Malls & retail",
+    short: "Screens at the entrance and through the mall, and digital signage inside stores. Reach shoppers at the moment of decision.",
+    title: "Mall Advertising in Dar es Salaam | Ashton Media",
+    description:
+      "Mall and retail advertising in Dar es Salaam: screens at the entrance of Mlimani City and through the mall, and digital signage inside retail spaces.",
+    h1: "Mall and retail advertising in Dar es Salaam",
+    lead:
+      "A mall is where people arrive ready to buy. Ashton Media's screens at Mlimani City — Dar es Salaam's busiest mall — greet shoppers at the door and follow them to the shop, and its retail digital signage carries a brand right onto the shop floor.",
+    sections: [
+      {
+        heading: "The Mlimani City network",
+        body: [
+          "A screen at the main entrance is the first thing a visitor sees — it is also Tanzania's first 3D screen. Inside, four Ultra-HD screens in the highest-traffic positions continue the message.",
+          "Vodacom Tanzania's device-financing campaign used the whole network to carry one story from the entrance to the point of purchase.",
+        ],
+      },
+      {
+        heading: "Retail digital signage",
+        body: [
+          "Beyond the mall, Ashton installs and runs digital signage inside retail spaces — supermarkets, fuel stations, showrooms — with promotions, products and brand content updated without a reprint.",
+          "If you own a retail space and want a screen network in it, or you are a brand that wants to be on one, talk to us.",
+        ],
+      },
+    ],
+    related: ["how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania", "unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen"],
+    faqs: [
+      { q: "Which malls can I advertise in?", a: "Mlimani City in Dar es Salaam, with a screen at the main entrance and four UHD screens inside. Ask about other locations — the network grows." },
+      { q: "Can I advertise inside Mlimani City without the entrance screen?", a: "Yes. The four UHD screens inside the mall can be booked on their own." },
+      { q: "Do you install screens in shops and petrol stations?", a: "Yes. Ashton designs, installs and runs digital signage in retail spaces." },
+      { q: "What creative do mall screens take?", a: "A still or a short video to the screen's specification. The entrance screen can also run 3D creative, which we can produce with you." },
+    ],
+    cta: { label: "Ask about mall advertising", whatsapp: "Hi Ashton Media, I'm interested in mall and retail screens. Please send details and rates." },
+  },
+  {
+    slug: "mobile-screens-tanzania",
+    nav: "Mobile screens",
+    short: "An LED screen on wheels: take the message to the market, the stadium, the launch — wherever the audience is that day.",
+    title: "Mobile LED Screen Advertising in Tanzania | Ashton Media",
+    description:
+      "Mobile LED screen trucks from Ashton: a digital billboard that goes where the audience is — events, markets, launches and roadshows across Tanzania.",
+    h1: "Mobile LED screens",
+    lead:
+      "Some audiences don't pass a fixed site. A mobile LED screen on a truck takes a full digital billboard to them — the market on market day, the stadium on match day, the roadshow as it moves from town to town — and parks where a brand needs to be seen.",
+    sections: [
+      {
+        heading: "What a mobile screen is for",
+        body: [
+          "Launches and activations, where the screen becomes the stage. Events, where it carries the sponsor's message to the crowd. Promotions that move: a route through the city over a day, or a roadshow upcountry over a week.",
+          "The screen runs the same creative as the fixed network — stills or video — so a campaign can start on the roads and arrive at the event on the same screen.",
+        ],
+      },
+      {
+        heading: "How it is booked",
+        body: [
+          "Tell us the dates, the places and the hours. We plan the route, handle the permits and the crew, and send photographs from each stop.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Where can the mobile screen go?", a: "Anywhere a truck can park: markets, stadiums, event venues, shopping streets and towns upcountry. Tell us the places and the dates and we plan the route." },
+      { q: "Can it run video?", a: "Yes. The screen runs stills or video, with sound where the venue allows it." },
+      { q: "Can I combine it with fixed sites?", a: "Yes — the same creative can run on the digital network and arrive at your event on the mobile screen." },
+    ],
+    cta: { label: "Ask about the mobile screen", whatsapp: "Hi Ashton Media, I'm interested in the mobile LED screen. Please send details and rates." },
   },
 ];
 
