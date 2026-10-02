@@ -1,26 +1,164 @@
 @import "tailwindcss";
+@import "@fontsource-variable/archivo/wdth.css";
+
+/*
+  Ashton Media Tanzania — design tokens
+  Black and white from the ASHTON wordmark; the award red as the single accent.
+  One family (Archivo) in two widths: expanded for headlines and numbers, normal for reading.
+*/
+@theme {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-red: #e3001b;
+  --color-red-deep: #b50016;
+  --color-ash: #f2f2f2;
+  --color-steel: #5f5f5f;
+  --color-rule: #d9d9d9;
+  --color-rule-dark: #2a2a2a;
+
+  --font-sans: "Archivo Variable", "Helvetica Neue", Arial, sans-serif;
+
+  --text-xs: 0.8125rem;   /* 13 */
+  --text-sm: 0.9375rem;   /* 15 */
+  --text-base: 1.0625rem; /* 17 */
+  --text-lg: 1.3125rem;   /* 21 */
+  --text-xl: 1.625rem;    /* 26 */
+  --text-2xl: 2.125rem;   /* 34 */
+  --text-3xl: 3rem;       /* 48 */
+  --text-4xl: 4rem;       /* 64 */
+  --text-5xl: 5.5rem;     /* 88 */
+
+  --breakpoint-xs: 30rem;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-family: var(--font-sans);
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-white);
+  color: var(--color-black);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  font-variation-settings: "wdth" 100;
 }
+
+/* Headlines: expanded width, heavy weight, tight leading. */
+.display {
+  font-variation-settings: "wdth" 125;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+.display-md {
+  font-variation-settings: "wdth" 118;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+.num {
+  font-variation-settings: "wdth" 125;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.wordmark {
+  font-variation-settings: "wdth" 112;
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+.wordmark-sub {
+  font-variation-settings: "wdth" 100;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+}
+.condensed {
+  font-variation-settings: "wdth" 85;
+}
+
+/* Reading measure */
+.measure { max-width: 38rem; }
+.measure-wide { max-width: 46rem; }
+
+/* Prose for articles and long pages */
+.prose-ashton > * + * { margin-top: 1.1em; }
+.prose-ashton h2 { font-variation-settings: "wdth" 118; font-weight: 750; font-size: var(--text-xl); line-height: 1.15; margin-top: 2em; letter-spacing: -0.01em; }
+.prose-ashton h3 { font-weight: 700; font-size: var(--text-lg); line-height: 1.25; margin-top: 1.6em; }
+.prose-ashton p, .prose-ashton li { max-width: 38rem; }
+.prose-ashton ul { padding-left: 1.25rem; list-style: disc; }
+.prose-ashton ol { padding-left: 1.25rem; list-style: decimal; }
+.prose-ashton li + li { margin-top: 0.4em; }
+.prose-ashton a { text-decoration: underline; text-underline-offset: 0.15em; text-decoration-thickness: 1.5px; }
+.prose-ashton a:hover { color: var(--color-red); }
+.prose-ashton strong { font-weight: 700; }
+.prose-ashton blockquote { border-left: 4px solid var(--color-black); padding-left: 1rem; font-size: var(--text-lg); line-height: 1.4; }
+
+/* Focus */
+:focus-visible { outline: 3px solid var(--color-red); outline-offset: 3px; }
+.on-dark :focus-visible { outline-color: var(--color-white); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 3rem; padding: 0.75rem 1.25rem;
+  font-weight: 700; font-size: var(--text-sm); line-height: 1.1;
+  border: 2px solid currentColor; text-decoration: none; cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.btn-red { background: var(--color-red); border-color: var(--color-red); color: var(--color-white); }
+.btn-red:hover { background: var(--color-red-deep); border-color: var(--color-red-deep); }
+.btn-black { background: var(--color-black); border-color: var(--color-black); color: var(--color-white); }
+.btn-black:hover { background: #262626; border-color: #262626; }
+.btn-white { background: var(--color-white); border-color: var(--color-white); color: var(--color-black); }
+.btn-white:hover { background: var(--color-ash); border-color: var(--color-ash); }
+.btn-outline { background: transparent; color: var(--color-black); }
+.btn-outline:hover { background: var(--color-black); color: var(--color-white); }
+.btn-outline-white { background: transparent; color: var(--color-white); }
+.btn-outline-white:hover { background: var(--color-white); color: var(--color-black); }
+
+/* The billboard frame: a thick black border is the structural device of the site. */
+.frame { border: 3px solid var(--color-black); }
+.frame-white { border: 3px solid var(--color-white); }
+
+/* Rules between rows */
+.rows > * + * { border-top: 1px solid var(--color-rule); }
+.rows-dark > * + * { border-top: 1px solid var(--color-rule-dark); }
+
+/* Form fields */
+.field {
+  width: 100%; min-height: 3rem; padding: 0.7rem 0.85rem;
+  border: 2px solid var(--color-black); background: var(--color-white); color: var(--color-black);
+  font-size: var(--text-base); line-height: 1.3; border-radius: 0;
+}
+.field:focus { outline: 3px solid var(--color-red); outline-offset: 2px; }
+.field::placeholder { color: #8a8a8a; }
+textarea.field { min-height: 8rem; resize: vertical; }
+select.field { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #000 50%), linear-gradient(135deg, #000 50%, transparent 50%); background-position: calc(100% - 1.25rem) 1.3rem, calc(100% - 0.9rem) 1.3rem; background-size: 0.4rem 0.4rem; background-repeat: no-repeat; padding-right: 2.5rem; }
+.check { display: flex; gap: 0.6rem; align-items: flex-start; min-height: 2.75rem; padding: 0.4rem 0; cursor: pointer; }
+.check input { width: 1.25rem; height: 1.25rem; margin-top: 0.15rem; accent-color: var(--color-red); flex: none; }
+label.lbl { display: block; font-weight: 700; font-size: var(--text-sm); margin-bottom: 0.4rem; }
+
+/* Sticky mobile contact bar */
+.mobile-bar { box-shadow: 0 -1px 0 var(--color-rule-dark); }
+
+/* Skip link */
+.skip { position: absolute; left: -999px; top: 0.5rem; z-index: 100; background: var(--color-red); color: #fff; padding: 0.6rem 1rem; font-weight: 700; }
+.skip:focus { left: 0.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Tap targets */
+a, button { -webkit-tap-highlight-color: rgba(227, 0, 27, 0.15); }

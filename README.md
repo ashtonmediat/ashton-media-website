@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ashtonmedia.net
 
-## Getting Started
+The website of Ashton Media Tanzania. Next.js (App Router) on Vercel. Content lives in
+`src/content/*.ts` — change a fact there and it changes everywhere.
 
-First, run the development server:
-
-```bash
+## Run locally
+```
+npm install
+cp .env.example .env.local   # fill in as needed
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things are
+- `src/content/site.ts` — company facts, proof numbers, cities, flagship sites, awards, timeline
+- `src/content/formats.ts` — the four format pages (digital, static, airport, malls & 3D) with FAQs
+- `src/content/work.ts` — case studies (`/work/…`)
+- `src/content/posts.ts` — Insights articles (`/insights/…`), Markdown bodies
+- `src/content/redirects.ts` — every old Weebly URL → new URL (applied in `next.config.ts`; `vercel.json` is generated from it)
+- `src/app/api/enquiry/route.ts` — form delivery by email (Resend)
+- `CONTENT-NOTES.md` — claims that still need the company's confirmation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
+Push to `main`; Vercel builds and deploys. Environment variables are listed in `.env.example`.
+Regenerate `vercel.json` after editing redirects: `node scripts/make-vercel-json.mjs`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Checks before launch
+`npm run build` must be clean. Then on the preview URL: every redirect in `src/content/redirects.ts`,
+the two forms (with `RESEND_API_KEY` set), tel and WhatsApp links on a phone, and the schema at
+https://validator.schema.org.
