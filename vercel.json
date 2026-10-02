@@ -2,172 +2,183 @@
   "redirects": [
     {
       "source": "/index.html",
-      "destination": "/",
+      "destination": "https://www.ashtonmedia.net/",
       "permanent": true
     },
     {
       "source": "/traditional-ooh.html",
-      "destination": "/static-billboards-tanzania/",
+      "destination": "https://www.ashtonmedia.net/static-billboards-tanzania/",
       "permanent": true
     },
     {
       "source": "/digital-ooh.html",
-      "destination": "/digital-billboards-tanzania/",
+      "destination": "https://www.ashtonmedia.net/digital-billboards-tanzania/",
       "permanent": true
     },
     {
       "source": "/airport-advertising.html",
-      "destination": "/airport-advertising-tanzania/",
+      "destination": "https://www.ashtonmedia.net/airport-advertising-tanzania/",
       "permanent": true
     },
     {
       "source": "/contact-us.html",
-      "destination": "/contact/",
+      "destination": "https://www.ashtonmedia.net/contact/",
       "permanent": true
     },
     {
       "source": "/our-gallery.html",
-      "destination": "/billboards-in-tanzania/",
+      "destination": "https://www.ashtonmedia.net/billboards-in-tanzania/",
       "permanent": true
     },
     {
       "source": "/our-solutions.html",
-      "destination": "/billboards-in-tanzania/",
+      "destination": "https://www.ashtonmedia.net/billboards-in-tanzania/",
       "permanent": true
     },
     {
       "source": "/test-features.html",
-      "destination": "/",
+      "destination": "https://www.ashtonmedia.net/",
       "permanent": true
     },
     {
       "source": "/blog.html",
-      "destination": "/blog/",
+      "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true
     },
     {
       "source": "/blog/previous/:page",
-      "destination": "/blog/",
+      "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true
     },
     {
       "source": "/blog/previous/:page/",
-      "destination": "/blog/",
+      "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true
     },
     {
       "source": "/1/post/:year/:month/:slug.html",
-      "destination": "/blog/",
+      "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true
     },
     {
       "source": "/insights",
-      "destination": "/blog/",
+      "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true
     },
     {
       "source": "/insights/",
-      "destination": "/blog/",
+      "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true
     },
     {
       "source": "/insights/:slug",
-      "destination": "/blog/:slug/",
+      "destination": "https://www.ashtonmedia.net/blog/:slug/",
       "permanent": true
     },
     {
       "source": "/insights/:slug/",
-      "destination": "/blog/:slug/",
+      "destination": "https://www.ashtonmedia.net/blog/:slug/",
       "permanent": true
     },
     {
       "source": "/work",
-      "destination": "/blog/",
+      "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true
     },
     {
       "source": "/work/",
-      "destination": "/blog/",
+      "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true
     },
     {
       "source": "/3d-billboard-tanzania",
-      "destination": "/digital-billboards-tanzania/",
+      "destination": "https://www.ashtonmedia.net/digital-billboards-tanzania/",
       "permanent": true
     },
     {
       "source": "/3d-billboard-tanzania/",
-      "destination": "/digital-billboards-tanzania/",
+      "destination": "https://www.ashtonmedia.net/digital-billboards-tanzania/",
       "permanent": true
     },
     {
       "source": "/work/tanzanias-first-3d-screen",
-      "destination": "/blog/unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen/",
+      "destination": "https://www.ashtonmedia.net/blog/unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen/",
       "permanent": true
     },
     {
       "source": "/work/tanzanias-first-3d-screen/",
-      "destination": "/blog/unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen/",
+      "destination": "https://www.ashtonmedia.net/blog/unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen/",
       "permanent": true
     },
     {
       "source": "/work/vodacom-screen-placement",
-      "destination": "/blog/how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania/",
+      "destination": "https://www.ashtonmedia.net/blog/how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania/",
       "permanent": true
     },
     {
       "source": "/work/vodacom-screen-placement/",
-      "destination": "/blog/how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania/",
+      "destination": "https://www.ashtonmedia.net/blog/how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania/",
       "permanent": true
     },
     {
       "source": "/work/circle-k-retail-digital-signage",
-      "destination": "/blog/transforming-retail-spaces-with-digital-signage-by-ashton-media/",
+      "destination": "https://www.ashtonmedia.net/blog/transforming-retail-spaces-with-digital-signage-by-ashton-media/",
       "permanent": true
     },
     {
       "source": "/work/circle-k-retail-digital-signage/",
-      "destination": "/blog/transforming-retail-spaces-with-digital-signage-by-ashton-media/",
+      "destination": "https://www.ashtonmedia.net/blog/transforming-retail-spaces-with-digital-signage-by-ashton-media/",
       "permanent": true
     },
     {
       "source": "/work/kfc-countdown-to-iftar",
-      "destination": "/blog/kfc-countdown-to-iftar-using-data-driven-dooh-advertising/",
+      "destination": "https://www.ashtonmedia.net/blog/kfc-countdown-to-iftar-using-data-driven-dooh-advertising/",
       "permanent": true
     },
     {
       "source": "/work/kfc-countdown-to-iftar/",
-      "destination": "/blog/kfc-countdown-to-iftar-using-data-driven-dooh-advertising/",
+      "destination": "https://www.ashtonmedia.net/blog/kfc-countdown-to-iftar-using-data-driven-dooh-advertising/",
       "permanent": true
     },
     {
       "source": "/work/chole-junction-dooh-upgrade",
-      "destination": "/blog/our-latest-dooh-upgrade-at-chole-junction-masaki-dar-es-salaam/",
+      "destination": "https://www.ashtonmedia.net/blog/our-latest-dooh-upgrade-at-chole-junction-masaki-dar-es-salaam/",
       "permanent": true
     },
     {
       "source": "/work/chole-junction-dooh-upgrade/",
-      "destination": "/blog/our-latest-dooh-upgrade-at-chole-junction-masaki-dar-es-salaam/",
+      "destination": "https://www.ashtonmedia.net/blog/our-latest-dooh-upgrade-at-chole-junction-masaki-dar-es-salaam/",
       "permanent": true
     },
     {
       "source": "/work/pepsi-logo-launch",
-      "destination": "/blog/pepsi-logo-launch-with-ashton-media/",
+      "destination": "https://www.ashtonmedia.net/blog/pepsi-logo-launch-with-ashton-media/",
       "permanent": true
     },
     {
       "source": "/work/pepsi-logo-launch/",
-      "destination": "/blog/pepsi-logo-launch-with-ashton-media/",
+      "destination": "https://www.ashtonmedia.net/blog/pepsi-logo-launch-with-ashton-media/",
       "permanent": true
     },
     {
       "source": "/work/tecno-viral-outdoor-strategy",
-      "destination": "/blog/simple-yet-viral-outdoor-ad-strategy-by-tecno/",
+      "destination": "https://www.ashtonmedia.net/blog/simple-yet-viral-outdoor-ad-strategy-by-tecno/",
       "permanent": true
     },
     {
       "source": "/work/tecno-viral-outdoor-strategy/",
-      "destination": "/blog/simple-yet-viral-outdoor-ad-strategy-by-tecno/",
+      "destination": "https://www.ashtonmedia.net/blog/simple-yet-viral-outdoor-ad-strategy-by-tecno/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "ashtonmedia.net"
+        }
+      ],
+      "destination": "https://www.ashtonmedia.net/:path*",
       "permanent": true
     }
   ]
