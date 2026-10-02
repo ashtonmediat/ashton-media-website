@@ -6,7 +6,7 @@ import { useState } from "react";
 import { cities } from "@/content/site";
 
 const OBJECTIVES = ["Launch", "Awareness", "Promotion", "Event", "Always-on"];
-const MEDIUMS = ["Any — recommend a mix", "Digital screens", "Static billboards", "Airport", "Malls and retail", "3D screen"];
+const MEDIUMS = ["Any — recommend a mix", "Digital screens", "Static billboards", "Airport", "SGR terminals", "Malls and retail", "Mobile screen"];
 const DURATIONS = ["2 weeks", "1 month", "3 months", "6 months", "12 months", "Not sure yet"];
 const CREATIVE = ["We have artwork", "We need design", "Not sure yet"];
 
