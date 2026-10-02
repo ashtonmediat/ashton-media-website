@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { site } from "@/content/site";
 import { WhatsAppLink } from "./WhatsAppLink";
@@ -33,7 +34,7 @@ export function MobileMenu({ items }: { items: { label: string; href: string }[]
       >
         <div className="flex min-h-full flex-col">
           <div className="flex items-center justify-between border-b border-rule-dark px-4 py-5">
-            <span className="wordmark text-xl text-white">Ashton</span>
+            <Image src="/brand/ashton-logo-white.png" alt="Ashton" width={100} height={24} style={{ height: 24, width: "auto" }} />
             <button type="button" className="nav-box" onClick={() => ref.current?.close()}>
               Close
             </button>

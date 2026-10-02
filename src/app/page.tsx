@@ -18,7 +18,7 @@ const network = [
   { label: "Static", href: "/static-billboards-tanzania/", image: "/images/tile-static.jpg", alt: "A static billboard above a busy market street in Dar es Salaam" },
   { label: "Digital", href: "/digital-billboards-tanzania/", image: "/images/tile-digital.jpg", alt: "A digital LED screen on a main road at dusk" },
   { label: "Airport", href: "/airport-advertising-tanzania/", image: "/images/tile-airport.jpg", alt: "A digital totem screen in the airport baggage hall" },
-  { label: "Mobile", href: "/mobile-screens-tanzania/", image: "/images/tile-mobile.jpg", alt: "A mobile LED screen mounted on a truck" },
+  { label: "SGR", href: "/sgr-advertising-tanzania/", image: "/images/tile-sgr.jpg", alt: "Digital totems outside the SGR terminal in Dar es Salaam" },
 ];
 
 const work = [
@@ -73,7 +73,7 @@ export default function HomePage() {
           <p className="text-white/80">Also on the network:</p>
           <div className="mt-4 flex flex-wrap justify-center gap-3">
             <Link href="/mall-advertising-dar-es-salaam/" className="nav-box">Malls &amp; retail</Link>
-            <Link href="/sgr-advertising-tanzania/" className="nav-box">SGR</Link>
+            <Link href="/mobile-screens-tanzania/" className="nav-box">Mobile screens</Link>
             <Link href="/billboards-in-tanzania/" className="nav-box nav-box-fill">The whole network</Link>
           </div>
         </div>
