@@ -14,6 +14,7 @@ export const metadata = pageMeta({
   description:
     "Entering Tanzania? One partner for billboards, digital screens, airport and malls: sites, production, permits and installation handled in Dar es Salaam.",
   path: "/advertising-in-tanzania/",
+  image: "/og/advertising-in-tanzania.jpg",
 });
 
 const faqs = [

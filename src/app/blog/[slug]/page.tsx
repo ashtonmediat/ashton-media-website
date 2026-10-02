@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     path: `/blog/${p.slug}/`,
     type: "article",
     publishedTime: p.date,
+    image: "/og/blog.jpg",
   });
 }
 

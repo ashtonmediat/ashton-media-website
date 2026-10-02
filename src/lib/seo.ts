@@ -7,6 +7,9 @@ export function abs(path: string) {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
+/** The preview picture shown when a link is shared on WhatsApp, LinkedIn, Facebook, Slack… (1200×630, see scripts/make-og.py). */
+export const DEFAULT_OG_IMAGE = "/og/default.jpg";
+
 /** Page metadata with canonical, Open Graph and sensible defaults. */
 export function pageMeta(input: {
   title: string;
@@ -15,8 +18,11 @@ export function pageMeta(input: {
   type?: "website" | "article";
   publishedTime?: string;
   noindex?: boolean;
+  /** Path under /public of the share image, e.g. "/og/digital-billboards-tanzania.jpg". */
+  image?: string;
 }): Metadata {
   const url = abs(input.path);
+  const image = abs(input.image ?? DEFAULT_OG_IMAGE);
   return {
     title: { absolute: input.title },
     description: input.description,
@@ -29,9 +35,10 @@ export function pageMeta(input: {
       siteName: site.name,
       type: input.type ?? "website",
       locale: "en_TZ",
+      images: [{ url: image, width: 1200, height: 630, alt: input.title }],
       ...(input.publishedTime ? { publishedTime: input.publishedTime } : {}),
     },
-    twitter: { card: "summary_large_image", title: input.title, description: input.description },
+    twitter: { card: "summary_large_image", title: input.title, description: input.description, images: [image] },
   };
 }
 
@@ -41,8 +48,10 @@ export const organizationLd = {
   "@id": `${SITE_URL}/#organization`,
   name: site.name,
   legalName: site.legalName,
-  alternateName: ["Ashton", "Ashton Media Tanzania"],
+  alternateName: ["Ashton"],
   url: SITE_URL,
+  logo: abs("/brand/ashton-logo.png"),
+  image: abs(DEFAULT_OG_IMAGE),
   foundingDate: String(site.founded),
   telephone: site.phone.e164,
   email: site.email,
@@ -52,10 +61,18 @@ export const organizationLd = {
     addressLocality: site.address.city,
     addressCountry: site.address.countryCode,
   },
+  hasMap: `https://www.google.com/maps?q=${encodeURIComponent(site.address.mapsQuery)}`,
   areaServed: { "@type": "Country", name: "Tanzania" },
   sameAs: [site.social.linkedin, site.social.instagram, site.social.facebook],
   award: awards.map((a) => `${a.body} ${a.year} — ${a.category}`),
-  knowsAbout: ["Out-of-home advertising", "Digital out-of-home advertising", "Billboard advertising", "Airport advertising"],
+  knowsAbout: [
+    "Out-of-home advertising",
+    "Digital out-of-home advertising",
+    "Billboard advertising",
+    "Airport advertising",
+    "Transit advertising",
+    "Mall advertising",
+  ],
 };
 
 export function breadcrumbLd(items: { name: string; path: string }[]) {
@@ -96,13 +113,14 @@ export function serviceLd(input: { name: string; description: string; path: stri
   };
 }
 
-export function articleLd(input: { title: string; description: string; path: string; date: string }) {
+export function articleLd(input: { title: string; description: string; path: string; date: string; image?: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: input.title,
     description: input.description,
     url: abs(input.path),
+    image: [abs(input.image ?? "/og/blog.jpg")],
     datePublished: input.date,
     dateModified: input.date,
     author: { "@id": `${SITE_URL}/#organization` },

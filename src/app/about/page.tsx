@@ -10,6 +10,7 @@ export const metadata = pageMeta({
   description:
     "Ashton Media is an award-winning out-of-home media owner in Dar es Salaam: the largest digital screen network in Tanzania, static billboards, airport and mall advertising.",
   path: "/about/",
+  image: "/og/about.jpg",
 });
 
 export default function AboutPage() {

@@ -3,7 +3,7 @@ import { pageMeta } from "@/lib/seo";
 import { site } from "@/content/site";
 
 export const metadata = pageMeta({
-  title: "Privacy Notice | Ashton Media Tanzania",
+  title: "Privacy Notice | Ashton Media",
   description: "How Ashton Media uses the information you send through this website, and the analytics it runs.",
   path: "/privacy/",
 });

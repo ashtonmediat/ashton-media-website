@@ -2,6 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { formToWhatsApp } from "@/lib/whatsapp-fallback";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const INTENTS = [
   { value: "general", label: "Advertising enquiry" },
@@ -16,6 +18,7 @@ export function EnquiryForm({ defaultIntent = "general", page = "/contact/" }: {
   const router = useRouter();
   const [state, setState] = useState<"idle" | "sending" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
+  const [last, setLast] = useState<Record<string, FormDataEntryValue> | null>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -23,6 +26,7 @@ export function EnquiryForm({ defaultIntent = "general", page = "/contact/" }: {
     setError(null);
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+    setLast(data);
     try {
       const res = await fetch("/api/enquiry/", {
         method: "POST",
@@ -79,9 +83,14 @@ export function EnquiryForm({ defaultIntent = "general", page = "/contact/" }: {
         <textarea id="message" name="message" className="field" placeholder="Where you want to be seen, when, and roughly what you'd like to spend." />
       </div>
       {error && (
-        <p role="alert" className="border-2 border-red px-4 py-3 text-sm font-semibold">
-          {error}
-        </p>
+        <div role="alert" className="border-2 border-red px-4 py-4 text-sm">
+          <p className="font-semibold">{error}</p>
+          {last && (
+            <WhatsAppLink text={formToWhatsApp(last)} className="btn btn-primary mt-3">
+              Send it on WhatsApp instead
+            </WhatsAppLink>
+          )}
+        </div>
       )}
       <div className="flex flex-wrap items-center gap-4">
         <button type="submit" className="btn btn-primary" disabled={state === "sending"}>

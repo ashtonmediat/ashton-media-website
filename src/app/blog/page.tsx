@@ -9,6 +9,7 @@ export const metadata = pageMeta({
   description:
     "News and ideas from Ashton: campaign stories, new screens, and how to get more from billboards and digital screens in Tanzania.",
   path: "/blog/",
+  image: "/og/blog.jpg",
 });
 
 export default function BlogIndex() {

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { cities } from "@/content/site";
+import { formToWhatsApp } from "@/lib/whatsapp-fallback";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 const OBJECTIVES = ["Launch", "Awareness", "Promotion", "Event", "Always-on"];
 const MEDIUMS = ["Any — recommend a mix", "Digital screens", "Static billboards", "Airport", "SGR terminals", "Malls and retail", "Mobile screen"];
@@ -24,6 +26,7 @@ export function BriefForm({ site: siteName }: { site?: string }) {
   const router = useRouter();
   const [state, setState] = useState<"idle" | "sending" | "error">("idle");
   const [error, setError] = useState<string | null>(null);
+  const [last, setLast] = useState<Record<string, string | string[]> | null>(null);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -36,6 +39,7 @@ export function BriefForm({ site: siteName }: { site?: string }) {
       if (k in data) data[k] = ([] as string[]).concat(data[k], v);
       else data[k] = v;
     }
+    setLast(data);
     try {
       const res = await fetch("/api/enquiry/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
       const json = (await res.json()) as { ok: boolean; error?: string };
@@ -154,7 +158,14 @@ export function BriefForm({ site: siteName }: { site?: string }) {
       </fieldset>
 
       {error && (
-        <p role="alert" className="border-2 border-red px-4 py-3 text-sm font-semibold">{error}</p>
+        <div role="alert" className="border-2 border-red px-4 py-4 text-sm">
+          <p className="font-semibold">{error}</p>
+          {last && (
+            <WhatsAppLink text={formToWhatsApp(last, "Hi Ashton, here is my campaign brief from the website:")} className="btn btn-primary mt-3">
+              Send the brief on WhatsApp instead
+            </WhatsAppLink>
+          )}
+        </div>
       )}
       <div className="flex flex-wrap items-center gap-4">
         <button type="submit" className="btn btn-primary" disabled={state === "sending"}>

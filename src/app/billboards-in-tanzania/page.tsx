@@ -14,6 +14,7 @@ export const metadata = pageMeta({
   description:
     "Billboards in Tanzania from an award-winning media owner: the largest digital screen network, static sites, airport and mall advertising. Get the site list.",
   path: "/billboards-in-tanzania/",
+  image: "/og/billboards-in-tanzania.jpg",
 });
 
 const faqs = [

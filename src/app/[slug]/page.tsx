@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const f = getFormat(slug);
   if (!f) return {};
-  return pageMeta({ title: f.title, description: f.description, path: `/${f.slug}/` });
+  return pageMeta({ title: f.title, description: f.description, path: `/${f.slug}/`, image: `/og/${f.slug}.jpg` });
 }
 
 export default async function FormatPage({ params }: { params: Promise<{ slug: string }> }) {
