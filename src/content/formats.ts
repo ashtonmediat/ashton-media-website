@@ -13,6 +13,7 @@ export type FormatPage = {
   lead: string;
   sections: { heading: string; body: string[] }[];
   related?: string[]; // blog slugs
+  gallery?: { name: string; alt: string }[]; // extra photographs in /public/images
   faqs: Faq[];
   cta: { label: string; whatsapp: string };
 };
@@ -249,6 +250,10 @@ export const formats: FormatPage[] = [
       { q: "Who travels on the SGR?", a: "Commuters, inter-city professionals, leisure travellers, families and students, and government and corporate travellers between Dar es Salaam and Dodoma." },
       { q: "Can I combine the SGR terminals with the airports?", a: "Yes. The rail terminals and the airports are booked together as one transit network, with the same creative following the traveller from one to the other." },
       { q: "How do I get the placement map and rates?", a: "Send a brief or WhatsApp us. The placement map, photographs and rates are sent the same business day." },
+    ],
+    gallery: [
+      { name: "sgr-terminal-totems", alt: "Digital totems outside the SGR terminal in Dar es Salaam" },
+      { name: "sgr-security-entrance", alt: "A digital screen at the security entrance of the SGR terminal" },
     ],
     cta: { label: "Ask about SGR advertising", whatsapp: "Hi Ashton Media, I'm interested in advertising at the SGR terminals. Please send the placement map and rates." },
   },

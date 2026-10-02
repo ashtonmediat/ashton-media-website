@@ -9,6 +9,9 @@ import { CtaBand } from "@/components/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { PhotoHero } from "@/components/PhotoHero";
+import Image from "next/image";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { pageMeta, faqLd, serviceLd } from "@/lib/seo";
 
 export const dynamicParams = false;
@@ -29,6 +32,7 @@ export default async function FormatPage({ params }: { params: Promise<{ slug: s
   const f = getFormat(slug);
   if (!f) notFound();
   const posts = (f.related ?? []).map(getPost).filter(Boolean);
+  const extraImages = (f.gallery ?? []).filter((g) => existsSync(join(process.cwd(), "public", "images", `${g.name}.jpg`)));
 
   return (
     <>
@@ -83,6 +87,18 @@ export default async function FormatPage({ params }: { params: Promise<{ slug: s
           </div>
         </div>
       </section>
+
+      {extraImages.length > 0 && (
+        <section aria-label="Photographs" className="on-dark bg-black">
+          <ul className="grid gap-px sm:grid-cols-2">
+            {extraImages.map((g) => (
+              <li key={g.name} className="relative aspect-[16/9]">
+                <Image src={`/images/${g.name}.jpg`} alt={g.alt} fill sizes="(min-width: 640px) 50vw, 100vw" className="object-cover" />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {posts.length > 0 && (
         <section aria-labelledby="related-posts" className="bg-ash py-14 md:py-20">
