@@ -5,9 +5,9 @@ import { pageMeta } from "@/lib/seo";
 import { postsByDate } from "@/content/posts";
 
 export const metadata = pageMeta({
-  title: "Insights on Out-of-Home Advertising in Tanzania | Ashton Media",
+  title: "Insights: Out-of-Home Advertising in Tanzania | Ashton Media",
   description:
-    "Articles from Ashton Media on billboard and digital out-of-home advertising in Tanzania: frequency, location, creative, QR codes, airport audiences and more.",
+    "Articles on billboard and digital out-of-home advertising in Tanzania: frequency, location, creative, QR codes, airport audiences and more.",
   path: "/insights/",
 });
 

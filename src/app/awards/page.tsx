@@ -4,7 +4,7 @@ import { pageMeta } from "@/lib/seo";
 import { awards } from "@/content/site";
 
 export const metadata = pageMeta({
-  title: "Awards: DailyDOOH 2018 & Consumer Choice 2023–25 | Ashton Media",
+  title: "Awards: DailyDOOH 2018, Consumer Choice 2023–25 | Ashton",
   description:
     "Ashton Media's awards: the DailyDOOH Gala Award in London (2018) for the 3D Digital Coke Bottle, and Consumer Choice Awards Africa in 2023, 2024 and 2025.",
   path: "/awards/",

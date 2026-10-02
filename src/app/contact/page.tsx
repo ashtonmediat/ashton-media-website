@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 export const metadata = pageMeta({
   title: "Contact Ashton Media Tanzania | Call, WhatsApp or Brief",
   description:
-    "Call +255 758 880 088, WhatsApp, or send a message. Ashton Media, Plot No. 4 New Bagamoyo Road, Dar es Salaam. Billboards, digital screens, airport and mall advertising.",
+    "Call +255 758 880 088, WhatsApp, or send a message. Ashton Media, Plot No. 4 New Bagamoyo Road, Dar es Salaam. Billboards, screens, airport and malls.",
   path: "/contact/",
 });
 

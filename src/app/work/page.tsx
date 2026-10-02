@@ -8,7 +8,7 @@ import { clients } from "@/content/site";
 export const metadata = pageMeta({
   title: "Our Work: Outdoor Campaigns in Tanzania | Ashton Media",
   description:
-    "Case studies from Ashton Media's network: Vodacom at Mlimani City, KFC's Countdown to Iftar, Pepsi's logo launch, TECNO, Circle K and Tanzania's first 3D screen.",
+    "Case studies from Ashton Media: Vodacom at Mlimani City, KFC's Countdown to Iftar, Pepsi's logo launch, TECNO, Circle K and Tanzania's first 3D screen.",
   path: "/work/",
 });
 

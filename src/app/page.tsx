@@ -10,7 +10,7 @@ import { workByDate } from "@/content/work";
 export const metadata = pageMeta({
   title: "Billboard Advertising in Tanzania | Ashton Media Tanzania",
   description:
-    "Tanzania's largest digital screen network, static billboards in Dar es Salaam and upcountry, exclusive advertising at JNIA Terminal 3 and Mlimani City. Since 2005.",
+    "Tanzania's largest digital screen network, static billboards, exclusive advertising at JNIA Terminal 3 and Mlimani City. Since 2005. Plan a campaign.",
   path: "/",
 });
 

@@ -9,9 +9,9 @@ import { site, cities, flagshipSites, clients, awards } from "@/content/site";
 import { formats } from "@/content/formats";
 
 export const metadata = pageMeta({
-  title: "Billboards in Tanzania | Ashton Media Tanzania",
+  title: "Billboards in Tanzania | Ashton Media",
   description:
-    "Billboards in Tanzania from the country's most awarded out-of-home media owner: 50+ digital screens, static sites, JNIA airport and Mlimani City, in Dar es Salaam and upcountry.",
+    "Billboards in Tanzania from the most awarded out-of-home media owner: 50+ digital screens, static sites, JNIA airport and Mlimani City. Get the site list.",
   path: "/billboards-in-tanzania/",
 });
 

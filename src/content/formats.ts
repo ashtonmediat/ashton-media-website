@@ -23,7 +23,7 @@ export const formats: FormatPage[] = [
     nav: "Digital screens",
     title: "Digital Billboards in Tanzania | Ashton Media Tanzania",
     description:
-      "Tanzania's largest digital screen network: 50+ LED screens in Dar es Salaam, Zanzibar, Dodoma, Mwanza and Namanga. Day-parting, live data and fast changes. Talk to us.",
+      "Tanzania's largest digital screen network: 50+ LED screens in Dar es Salaam, Zanzibar, Dodoma, Mwanza and Namanga. Day-parting, live data, fast changes.",
     h1: "Digital billboards and LED screens across Tanzania",
     lead:
       "ADN — Ashton Digital Network — is the country's largest digital out-of-home network: more than 50 screens, from Selander Bridge and Chole Junction in Dar es Salaam to Zanzibar, Dodoma, Mwanza and the Namanga border. One booking puts a brand on all of them, or on the three that matter.",
@@ -74,7 +74,7 @@ export const formats: FormatPage[] = [
     nav: "Static billboards",
     title: "Static Billboards in Tanzania | Ashton Media Tanzania",
     description:
-      "Static billboards and large-format sites in Dar es Salaam and upcountry Tanzania, with print, installation and posting handled by one team. Request the site list.",
+      "Static billboards and large-format sites in Dar es Salaam and upcountry Tanzania. Print, installation and posting by one team. Request the site list.",
     h1: "Static billboards in Dar es Salaam and across Tanzania",
     lead:
       "A static billboard is still the simplest way to own a road. Ashton Media's static sites sit on the routes Dar es Salaam drives every day, and the same team handles the print, the installation and the posting, so one quote covers the whole job.",
@@ -115,7 +115,7 @@ export const formats: FormatPage[] = [
     nav: "Airport",
     title: "Airport Advertising at JNIA Terminal 3 | Ashton Media",
     description:
-      "Exclusive advertising at Julius Nyerere International Airport Terminal 3, Dar es Salaam: the escalator screen, digital network, pillar wraps and baggage-claim sites.",
+      "Exclusive advertising at Julius Nyerere International Airport Terminal 3: the escalator screen, digital network, pillar wraps and baggage-claim sites.",
     h1: "Airport advertising at JNIA Terminal 3, Dar es Salaam",
     lead:
       "Ashton Media holds the exclusive advertising rights at Terminal 3 of Julius Nyerere International Airport. Every international arrival into Dar es Salaam walks past the escalator screen, through the digital network and the pillar wraps, and waits at baggage claim in front of our sites.",
@@ -152,9 +152,9 @@ export const formats: FormatPage[] = [
   {
     slug: "mall-advertising-dar-es-salaam",
     nav: "Malls & 3D",
-    title: "Mall Advertising in Dar es Salaam & 3D Screens | Ashton Media",
+    title: "Mall Advertising in Dar es Salaam & 3D Screens | Ashton",
     description:
-      "Tanzania's first 3D screen at the entrance of Mlimani City, four UHD screens inside the mall, and retail digital signage. Reach shoppers at the moment of decision.",
+      "Tanzania's first 3D screen at the entrance of Mlimani City, four UHD screens inside the mall, and retail digital signage. Reach shoppers as they decide.",
     h1: "Mall advertising at Mlimani City and Tanzania's first 3D screen",
     lead:
       "In January 2024 Ashton Media switched on Tanzania's first 3D-ready screen at the main entrance of Mlimani City, Dar es Salaam's busiest mall, with four Ultra-HD screens placed through the mall itself. It is the only place in the country where a brand can greet shoppers in 3D at the door and follow them to the shop.",

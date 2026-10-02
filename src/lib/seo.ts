@@ -18,7 +18,7 @@ export function pageMeta(input: {
 }): Metadata {
   const url = abs(input.path);
   return {
-    title: input.title,
+    title: { absolute: input.title },
     description: input.description,
     alternates: { canonical: url },
     robots: input.noindex ? { index: false, follow: false } : undefined,

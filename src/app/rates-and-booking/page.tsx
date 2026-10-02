@@ -9,7 +9,7 @@ import { site, bookingSteps } from "@/content/site";
 export const metadata = pageMeta({
   title: "Billboard Rates & How to Book in Tanzania | Ashton Media",
   description:
-    "How to book a billboard or digital screen with Ashton Media: brief, plan, quote, artwork, live, report. Request the rate card for static, digital, airport and mall sites.",
+    "How to book a billboard or digital screen in Tanzania: brief, plan, quote, artwork, live, report. Request the Ashton Media rate card today.",
   path: "/rates-and-booking/",
 });
 

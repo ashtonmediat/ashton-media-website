@@ -37,7 +37,7 @@ export function BriefForm({ site: siteName }: { site?: string }) {
       else data[k] = v;
     }
     try {
-      const res = await fetch("/api/enquiry", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
+      const res = await fetch("/api/enquiry/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
       const json = (await res.json()) as { ok: boolean; error?: string };
       if (!res.ok || !json.ok) throw new Error(json.error || "Something went wrong.");
       window.dataLayer = window.dataLayer || [];
@@ -50,7 +50,7 @@ export function BriefForm({ site: siteName }: { site?: string }) {
   }
 
   return (
-    <form action="/api/enquiry" method="post" onSubmit={onSubmit} className="grid gap-10" noValidate>
+    <form action="/api/enquiry/" method="post" onSubmit={onSubmit} className="grid gap-10" noValidate>
       <input type="hidden" name="intent" value="brief" />
       <input type="hidden" name="page" value="/plan-a-campaign/" />
       {siteName && <input type="hidden" name="message" value={`Interested in: ${siteName}`} />}

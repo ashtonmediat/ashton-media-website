@@ -9,9 +9,9 @@ import { site, clients, awards } from "@/content/site";
 import { workByDate } from "@/content/work";
 
 export const metadata = pageMeta({
-  title: "Advertising in Tanzania for International Brands | Ashton Media",
+  title: "Advertising in Tanzania for International Brands | Ashton",
   description:
-    "Entering Tanzania? One partner for billboards, digital screens, JNIA airport and malls — sites, production, permits and installation handled in Dar es Salaam since 2005.",
+    "Entering Tanzania? One partner for billboards, digital screens, JNIA airport and malls: sites, production, permits and installation, since 2005.",
   path: "/advertising-in-tanzania/",
 });
 

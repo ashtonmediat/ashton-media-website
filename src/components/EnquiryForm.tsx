@@ -24,7 +24,7 @@ export function EnquiryForm({ defaultIntent = "general", page = "/contact/" }: {
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
     try {
-      const res = await fetch("/api/enquiry", {
+      const res = await fetch("/api/enquiry/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -41,7 +41,7 @@ export function EnquiryForm({ defaultIntent = "general", page = "/contact/" }: {
   }
 
   return (
-    <form action="/api/enquiry" method="post" onSubmit={onSubmit} className="grid gap-5" noValidate>
+    <form action="/api/enquiry/" method="post" onSubmit={onSubmit} className="grid gap-5" noValidate>
       <input type="hidden" name="page" value={page} />
       <div className="hidden" aria-hidden>
         <label>Website<input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>

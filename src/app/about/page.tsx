@@ -8,7 +8,7 @@ import { site, timeline, awards, clients, proof } from "@/content/site";
 export const metadata = pageMeta({
   title: "About Ashton Media Tanzania: OOH Since 2005 | Ashton Media",
   description:
-    "Ashton Media has sold outdoor advertising in Tanzania since 2005: the largest digital screen network, static billboards, JNIA Terminal 3 and Mlimani City. Four awards, 2018–2025.",
+    "Outdoor advertising in Tanzania since 2005: the largest digital screen network, static billboards, JNIA Terminal 3, Mlimani City. Four awards, 2018–2025.",
   path: "/about/",
 });
 

@@ -9,7 +9,7 @@ import { site } from "@/content/site";
 export const metadata = pageMeta({
   title: "Billboard Advertising Cost in Tanzania | Ashton Media",
   description:
-    "What a billboard costs in Tanzania and why: format, location, duration, production and creative. Digital versus static economics, and how to get a quote in a day.",
+    "What a billboard costs in Tanzania and why: format, location, duration, production, creative. Digital versus static, and how to get a quote in a day.",
   path: "/billboard-advertising-cost-tanzania/",
 });
 
