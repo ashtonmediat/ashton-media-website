@@ -92,8 +92,13 @@ export async function POST(req: Request) {
   const from = process.env.ENQUIRY_FROM || "Ashton Media website <enquiries@notify.ashtonmedia.net>";
 
   if (!key) {
+    // Never pretend a message was sent. Log it so it can be found in Vercel's function logs, and tell the
+    // visitor to use WhatsApp or the phone instead.
     console.error("[enquiry] RESEND_API_KEY is not set; enquiry not delivered:\n" + text);
-    return NextResponse.json({ ok: true, delivered: false });
+    return NextResponse.json(
+      { ok: false, error: "Our form isn't able to send right now. Please WhatsApp or call +255 758 880 088 — we're here." },
+      { status: 503 },
+    );
   }
 
   try {
