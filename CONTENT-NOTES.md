@@ -20,12 +20,15 @@ before or shortly after launch. Each points at the file to edit.
 | Reply time "usually within a few hours on business days" | forms, CTA band | A promise — confirm the team can keep it |
 | 2024 Consumer Choice Awards category wording | `src/content/site.ts` (`awards`) | Exact 2024 wording to confirm |
 | Company founded 2005 | about, schema | ZoomTanzania/TechBehemoths say 2005; Tanzapages shows 2012 registration — reconcile |
-| Insights posts marked `partial: true` | `src/content/posts.ts` | Rewritten from recovered excerpts; restore originals from the Internet Archive copy if preferred |
+| Blog posts marked `partial: true` | `src/content/posts.ts` | Completed from recovered excerpts in the company's voice; restore the originals from the Internet Archive copy if preferred |
+| Mobile LED screens page — what the truck does, where it can go, sound | `src/content/formats.ts` (mobile-screens-tanzania) | Written from the photograph of the ADN truck only; confirm the service details |
+| Logo | `public/brand/ashton-logo*.png` | Cut from the design mockup at 489×117 px; replace with the vector logo (same file names, PNG or SVG) |
+| Photo captions / alt text | `src/app/page.tsx`, format pages | Describe what the photographs show; correct any site names |
 
 ## Not on the site yet (by design)
 - Prices or price bands (decision 14 in the brief)
 - Client logos (permission flags needed) — names only
-- Photographs — none were recoverable before the old site went offline; the layout has no empty image slots, so nothing looks missing. Add photography to site pages when it arrives.
+- Photographs — from Downloads/Website (Selected Images and Design/Images), resized for the web in `public/images/`. No photograph yet for the 3D screen page.
 - Swahili pages (native writer)
 - Site finder and site pages (need the site database)
 - Campaign results figures (none confirmed)

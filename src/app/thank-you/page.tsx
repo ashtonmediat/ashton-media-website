@@ -2,9 +2,10 @@ import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/content/site";
 import { ConversionPing } from "@/components/ConversionPing";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 
 export const metadata = pageMeta({
-  title: "Thanks: we have your message | Ashton Media Tanzania",
+  title: "Thanks: we have your message | Ashton Media",
   description: "Your message has reached Ashton Media. A real person replies by email or WhatsApp.",
   path: "/thank-you/",
   noindex: true,
@@ -23,11 +24,13 @@ export default async function ThankYouPage({ searchParams }: { searchParams: Pro
             ? "A planner will come back with sites, photographs and a quote — usually within a few hours on business days, or first thing when the office opens."
             : "A real person replies by email or WhatsApp — usually within a few hours on business days, or first thing when the office opens."}
         </p>
-        <p className="measure-wide mt-4 text-steel">
-          In a hurry? WhatsApp <a href={site.whatsapp.url("Hi Ashton Media, I just sent a message through the website.")} data-track="whatsapp" className="font-bold text-black underline underline-offset-4">{site.phone.display}</a> and mention the website.
-        </p>
+        <div className="mt-6">
+          <WhatsAppLink text="Hi Ashton Media, I just sent a message through the website." className="btn btn-outline">
+            In a hurry? WhatsApp {site.phone.display}
+          </WhatsAppLink>
+        </div>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link href="/work/" className="btn btn-outline">See our work while you wait</Link>
+          <Link href="/blog/" className="btn btn-outline">Read the blog while you wait</Link>
           <Link href="/" className="btn btn-outline">Back to the home page</Link>
         </div>
       </div>

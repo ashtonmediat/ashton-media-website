@@ -84,7 +84,7 @@ export function EnquiryForm({ defaultIntent = "general", page = "/contact/" }: {
         </p>
       )}
       <div className="flex flex-wrap items-center gap-4">
-        <button type="submit" className="btn btn-red" disabled={state === "sending"}>
+        <button type="submit" className="btn btn-primary" disabled={state === "sending"}>
           {state === "sending" ? "Sending…" : "Send message"}
         </button>
         <span className="text-sm text-steel">We reply by email or WhatsApp, usually within a few hours on business days.</span>

@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formats, getFormat } from "@/content/formats";
-import { getCaseStudy } from "@/content/work";
+import { getPost } from "@/content/posts";
 import { site } from "@/content/site";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Faq } from "@/components/Faq";
 import { CtaBand } from "@/components/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { PhotoHero } from "@/components/PhotoHero";
 import { pageMeta, faqLd, serviceLd } from "@/lib/seo";
 
 export const dynamicParams = false;
@@ -26,35 +28,25 @@ export default async function FormatPage({ params }: { params: Promise<{ slug: s
   const { slug } = await params;
   const f = getFormat(slug);
   if (!f) notFound();
-  const studies = (f.caseStudies ?? []).map(getCaseStudy).filter(Boolean);
+  const posts = (f.related ?? []).map(getPost).filter(Boolean);
 
   return (
     <>
       <JsonLd data={[serviceLd({ name: f.h1, description: f.description, path: `/${f.slug}/` }), faqLd(f.faqs)]} />
 
-      <section className="on-dark bg-black text-white">
-        <div className="mx-auto max-w-7xl px-4 pt-8 pb-12 md:px-8 md:pt-10 md:pb-16">
-          <Breadcrumbs dark items={[{ name: "Billboards in Tanzania", path: "/billboards-in-tanzania/" }, { name: f.nav, path: `/${f.slug}/` }]} />
-          <h1 className="display mt-6 text-[2.2rem] sm:text-4xl lg:text-5xl">{f.h1}</h1>
-          <p className="measure-wide mt-6 text-lg text-white/85">{f.lead}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/plan-a-campaign/" className="btn btn-red">{f.cta.label}</Link>
-            <a href={site.whatsapp.url(f.cta.whatsapp)} data-track="whatsapp" className="btn btn-outline-white">WhatsApp us</a>
+      <PhotoHero image={f.slug} alt={f.h1}>
+        <div className="mx-auto max-w-7xl px-4 pt-8 pb-16 md:px-8 md:pt-10 md:pb-24">
+          <Breadcrumbs dark items={[{ name: "Network", path: "/billboards-in-tanzania/" }, { name: f.nav, path: `/${f.slug}/` }]} />
+          <div className="mt-10 max-w-3xl md:mt-16">
+            <h1 className="display text-[2.4rem] sm:text-5xl lg:text-6xl">{f.h1}</h1>
+            <p className="mt-6 text-lg text-white/90 md:text-xl">{f.lead}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/plan-a-campaign/" className="btn btn-outline-white">{f.cta.label}</Link>
+              <WhatsAppLink text={f.cta.whatsapp} className="btn btn-outline-white">WhatsApp us</WhatsAppLink>
+            </div>
           </div>
         </div>
-        {f.facts && (
-          <div className="border-t border-rule-dark">
-            <dl className="mx-auto grid max-w-7xl sm:grid-cols-2 lg:grid-cols-4">
-              {f.facts.map((x, i) => (
-                <div key={x.label} className={`px-4 py-5 md:px-8 ${i > 0 ? "border-t border-rule-dark sm:border-t-0 sm:border-l" : ""}`}>
-                  <dt className="text-sm text-white/70">{x.label}</dt>
-                  <dd className="mt-1 font-bold">{x.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-        )}
-      </section>
+      </PhotoHero>
 
       <section className="py-14 md:py-20">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
@@ -72,9 +64,9 @@ export default async function FormatPage({ params }: { params: Promise<{ slug: s
             <aside className="lg:col-span-4">
               <div className="frame p-5 md:p-6">
                 <h2 className="display-md text-lg">Get the current site list</h2>
-                <p className="mt-3 text-steel">Photographs, locations and rates for the sites in this format, sent the same day.</p>
+                <p className="mt-3 text-steel">Photographs, locations and rates for this format, sent the same day.</p>
                 <div className="mt-5 grid gap-3">
-                  <a href={site.whatsapp.url(f.cta.whatsapp)} data-track="whatsapp" className="btn btn-black">WhatsApp {site.phone.display}</a>
+                  <WhatsAppLink text={f.cta.whatsapp} className="btn btn-black">WhatsApp {site.phone.display}</WhatsAppLink>
                   <a href={site.phone.tel} data-track="tel" className="btn btn-outline">Call us</a>
                   <Link href="/plan-a-campaign/" className="btn btn-outline">Send a brief</Link>
                 </div>
@@ -92,17 +84,16 @@ export default async function FormatPage({ params }: { params: Promise<{ slug: s
         </div>
       </section>
 
-      {studies.length > 0 && (
-        <section aria-labelledby="related-work" className="bg-ash py-14 md:py-20">
+      {posts.length > 0 && (
+        <section aria-labelledby="related-posts" className="bg-ash py-14 md:py-20">
           <div className="mx-auto max-w-7xl px-4 md:px-8">
-            <h2 id="related-work" className="display-md text-2xl md:text-3xl">Work in this format</h2>
+            <h2 id="related-posts" className="display-md text-2xl md:text-3xl">From the blog</h2>
             <ul className="rows mt-8 border-t border-b border-rule">
-              {studies.map((w) => w && (
-                <li key={w.slug}>
-                  <Link href={`/work/${w.slug}/`} className="group grid gap-2 py-5 md:grid-cols-12 md:items-baseline">
-                    <span className="text-sm font-bold md:col-span-2">{w.client}</span>
-                    <span className="display-md text-lg md:col-span-7 group-hover:underline underline-offset-4">{w.title}</span>
-                    <span className="text-sm text-steel md:col-span-3 md:text-right">{w.where}</span>
+              {posts.map((p) => p && (
+                <li key={p.slug}>
+                  <Link href={`/blog/${p.slug}/`} className="group grid gap-2 py-5 md:grid-cols-12 md:items-baseline">
+                    <time dateTime={p.date} className="text-sm text-steel md:col-span-2">{new Date(p.date).toLocaleDateString("en-GB", { month: "short", year: "numeric" })}</time>
+                    <span className="display-md text-lg md:col-span-10 group-hover:underline underline-offset-4">{p.title}</span>
                   </Link>
                 </li>
               ))}

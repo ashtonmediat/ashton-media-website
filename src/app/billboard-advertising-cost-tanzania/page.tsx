@@ -3,8 +3,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { pageMeta, faqLd } from "@/lib/seo";
-import { site } from "@/content/site";
 
 export const metadata = pageMeta({
   title: "Billboard Advertising Cost in Tanzania | Ashton Media",
@@ -43,8 +43,8 @@ export default function CostPage() {
             Here they are, so you can plan a budget before you ask for a quote — and when you ask, you get one the same day.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/plan-a-campaign/" className="btn btn-red">Get a quote for my budget</Link>
-            <a href={site.whatsapp.url("Hi Ashton Media, please send the rate card and let me know what my budget could do.")} data-track="whatsapp" className="btn btn-outline">Ask on WhatsApp</a>
+            <Link href="/plan-a-campaign/" className="btn btn-primary">Get a quote for my budget</Link>
+            <WhatsAppLink text="Hi Ashton Media, please send the rate card and let me know what my budget could do." className="btn btn-outline">Ask on WhatsApp</WhatsAppLink>
           </div>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function CostPage() {
             </div>
           </div>
           <p className="measure-wide mt-6 text-sm text-steel">
-            Published price bands by format and city are coming to this page. Until then, the rate card is a message away.
+            The rate card is a message away.
           </p>
         </div>
       </section>

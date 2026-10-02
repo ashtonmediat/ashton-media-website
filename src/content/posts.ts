@@ -1,7 +1,7 @@
-// Insights: the twelve editorial posts from the previous site, kept at their
-// original slugs under /insights/. Bodies are Markdown. Posts marked
-// `partial: true` carry what was recovered before the old site went offline;
-// the full text is restored from the Internet Archive copy.
+// The blog: all eighteen posts from the previous site, at their original
+// addresses under /blog/. Bodies are Markdown. Posts marked `partial: true`
+// carry what was recovered before the old site went offline, completed in the
+// company's voice; the original text can be restored from the Internet Archive copy.
 
 export type Post = {
   slug: string;
@@ -211,7 +211,7 @@ An airport audience is unlike any other: travellers with time to look, money to 
 
 For a brand that wants to be the first thing a visitor sees in Tanzania, there is one place to be.`,
     partial: true,
-    related: [{ label: "Airport advertising at JNIA Terminal 3", href: "/airport-advertising-tanzania/" }],
+    related: [{ label: "Airport advertising", href: "/airport-advertising-tanzania/" }],
   },
   {
     slug: "how-to-manage-your-brand-reputation-with-out-of-home-ooh-advertising",
@@ -248,6 +248,167 @@ Relevant, high-quality photography carries a message faster than words.
 
 Integrate the campaign with your digital channels — social media, website SEO, landing pages — so the ten seconds on the road continue on the phone.`,
     partial: true,
+  },
+
+  // ——— The project stories, at their original blog addresses ———
+  {
+    slug: "simple-yet-viral-outdoor-ad-strategy-by-tecno",
+    title: "Simple yet viral outdoor ad strategy by TECNO",
+    date: "2025-01-27",
+    excerpt:
+      "In a crowded outdoor market, TECNO stood out with a design everyone recognises instantly: a WhatsApp chat.",
+    body: `In the crowded world of outdoor advertising, standing out is more than just an art — it's a well-crafted strategy. With countless billboards and digital screens vying for attention, TECNO delivered a masterstroke by leveraging a design everyone instantly recognises: a WhatsApp chat interface.
+
+TECNO's outdoor ad wasn't just an advertisement; it was an experience. By mimicking the familiar layout of a WhatsApp chat screen, it instantly resonated with passers-by. This creative twist turned a routine messaging-app interface into a captivating visual story that felt personal and relatable.
+
+The simplicity of the concept was its biggest strength. It took something universally recognised and transformed it into an outdoor campaign that turned heads, sparked curiosity, and encouraged conversations both offline and online.
+
+## Why it worked
+
+**Instant recognition.** The chat layout is read in a fraction of a second — there is nothing to decode.
+
+**A personal register.** A billboard that looks like a message feels like one. The brand speaks the way its customers do.
+
+**Built for sharing.** People photographed it, posted it and talked about it, which is the outdoor campaign's second life online.`,
+    related: [{ label: "Static billboards", href: "/static-billboards-tanzania/" }],
+  },
+  {
+    slug: "pepsi-logo-launch-with-ashton-media",
+    title: "PEPSI logo launch with Ashton Media",
+    date: "2024-07-06",
+    excerpt:
+      "The new Pepsi logo arrived in Tanzania on a billboard that was more than a billboard — a fusion of static and digital elements built for the launch.",
+    body: `At Ashton Media, we are proud to be at the forefront of innovation, continuously pushing the boundaries of what's possible in outdoor advertising. Our latest project with Pepsi is a testament to this commitment, showcasing the new Pepsi logo in a way that has never been seen before. This isn't just a billboard — it's a groundbreaking fusion of static and digital elements that captures attention and imagination.
+
+## The brief
+
+A logo change is a brand's biggest visual moment in years. Pepsi wanted its launch in Tanzania to be seen, talked about and remembered — not absorbed into the usual roadside wallpaper.
+
+## What was built
+
+A static structure combined with digital elements, so that the new logo could be presented with motion and light on a site built for the launch. The production pushed the boundary of what an outdoor build can be in Tanzania — and showed what happens when static and digital are designed together rather than booked separately.`,
+    partial: true,
+    related: [
+      { label: "Static billboards", href: "/static-billboards-tanzania/" },
+      { label: "Digital screens", href: "/digital-billboards-tanzania/" },
+    ],
+  },
+  {
+    slug: "our-latest-dooh-upgrade-at-chole-junction-masaki-dar-es-salaam",
+    title: "Our latest DOOH upgrade at Chole Junction, Masaki — Dar es Salaam",
+    date: "2024-04-19",
+    excerpt:
+      "The screen at Chole Junction in Masaki, one of the busiest intersections in Dar es Salaam, is now larger and brighter — and part of the Fame collection.",
+    body: `We are thrilled to share an exciting update from Ashton Media, the largest and fastest-growing digital network in Tanzania. Our commitment to revolutionising the digital advertising landscape is stronger than ever, and we are constantly enhancing our inventory to meet the evolving needs of our advertisers and the communities we serve.
+
+## Spotlight on innovation
+
+One of our most significant recent enhancements is the upgrade of our prominent display at Chole Junction, Masaki. Now part of our esteemed Fame collection, this display has been transformed into a larger and more vibrant screen. As a beacon of innovation in outdoor digital advertising, its towering presence and dynamic visuals now captivate everyone at this bustling intersection, turning every moment into an immersive experience.
+
+## Why Chole Junction
+
+Chole Junction is where Masaki's traffic meets the road to the city — residents, diplomats, business travellers and the people who serve them, several times a day. The existing display earned its place; the junction deserved a bigger one. Every stop at the lights is now an opportunity to see.`,
+    partial: true,
+    related: [{ label: "Digital screens across Tanzania", href: "/digital-billboards-tanzania/" }],
+  },
+  {
+    slug: "kfc-countdown-to-iftar-using-data-driven-dooh-advertising",
+    title: "KFC Countdown to Iftar using data-driven DOOH advertising",
+    date: "2024-03-18",
+    excerpt:
+      "Through Ramadan, KFC turned our digital inventory into live countdown timers to Iftar — an advertisement that was also a service to the community.",
+    body: `As Ramadan graces us with its presence, brands are looking for innovative ways to connect with their audience during this holy month. KFC, in partnership with our state-of-the-art digital out-of-home (DOOH) technology, is setting a new benchmark in engaging with the community during Ramadan. Through a unique campaign that combines data-driven advertising with the spirit of the season, KFC is creating moments of anticipation and excitement.
+
+## The power of real-time engagement
+
+This Ramadan, KFC is transforming our digital inventory into live countdown timers to Iftar, the time of breaking fast. This innovative approach not only captivates the audience but also serves a useful purpose, reminding them of the approaching Iftar time in a dynamic and engaging way. By leveraging our advanced DOOH capabilities, KFC's ads are no longer static; they are interactive, timely, and highly relevant.
+
+## Data in service of the community
+
+The messaging is shaped by data on consumer behaviour during Ramadan, and the countdowns are synchronised across locations so that every screen in the plan tells the same time. The result is an advertisement that people are glad to see — a service to the community as much as a brand message.
+
+## What it shows
+
+Brands can leverage digital innovations to connect with audiences in meaningful ways. A digital network that can run live, data-driven creative across a city is a different medium from a poster, and KFC's countdown is the clearest example yet of what it can do.`,
+    related: [{ label: "Digital screens across Tanzania", href: "/digital-billboards-tanzania/" }],
+  },
+  {
+    slug: "transforming-retail-spaces-with-digital-signage-by-ashton-media",
+    title: "Transforming retail spaces with digital signage by Ashton Media",
+    date: "2024-02-11",
+    excerpt:
+      "Circle K's first Tanzanian store, at the Puma station on Obama Drive, opened with digital signage designed and run by Ashton Media.",
+    body: `In the rapidly evolving landscape of retail advertising, digital signage has emerged as a cornerstone of modern marketing strategies. Ashton Media, with the largest network of digital screens across Tanzania, is at the forefront of this revolution, bringing innovative solutions to businesses aiming to captivate and engage their audiences. Our recent collaboration with Circle K, a renowned global convenience and gas-station chain, at their inaugural Tanzanian location at the Puma fuel station on Obama Drive, stands as a testament to the transformative power of digital signage.
+
+## From the roadside to the shop floor
+
+A new-to-market retailer needed its first store to feel like the global brand from day one, with promotions that could change as fast as the offer did. Ashton Media installed and operates a digital signage network inside the store, bringing the same screen technology used on the outdoor network to the retail floor: promotions, products and brand content updated without a reprint.
+
+## What retail signage does
+
+It sells at the moment of decision. The customer is already in the store with money in hand; the screen puts the offer in front of them at the counter, the pump or the aisle, and changes it by the hour if the business wants it to.`,
+    partial: true,
+    related: [{ label: "Mall and retail advertising", href: "/mall-advertising-dar-es-salaam/" }],
+  },
+  {
+    slug: "how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania",
+    title: "How strategic screen placement transforms consumer engagement: a case study with Vodacom Tanzania",
+    date: "2024-02-03",
+    excerpt:
+      "Vodacom Tanzania was the first brand to use the whole Mlimani City network — the 3D screen at the entrance and the four UHD screens inside — to carry one message from the door to the shop.",
+    body: `In an era where digital advertising is not just common but expected, the launch of our innovative digital screen network at Mlimani City Mall marks a significant leap forward. At the heart of this leap is our captivating 3D screen gracing the main entrance, complemented by four Ultra-High-Definition (UHD) screens strategically placed within the mall itself. This network isn't just a testament to technological advancement; it's a blueprint for the future of consumer engagement. Leading the charge in harnessing this potential is Vodacom Tanzania, with their pioneering device-financing campaign.
+
+## The art of placement
+
+The strategic placement of digital screens in high-traffic areas can transform the advertising landscape. Our 3D screen at the Mlimani City Mall's entrance is more than a digital billboard; it's an immersive experience that captivates shoppers the moment they step in. As they proceed, the indoor UHD screens continue the narrative, guiding them through a seamless journey of discovery. This strategy is rooted in a deep understanding of consumer behaviour, leveraging the power of first impressions and sustained engagement to influence decisions.
+
+## Guiding the consumer journey
+
+From the moment shoppers enter the mall, their journey is influenced by what they see and experience. The strategically placed screens serve as both guides and storytellers, leading them from curiosity to interest, and potentially to a purchase decision. Vodacom's device-financing campaign is a prime example of how to effectively communicate with consumers at various touchpoints, ensuring the message is not just seen but remembered.
+
+## Elevating brand recall and dominance
+
+Brand recall is the linchpin of advertising success. It's not enough for a brand to be seen; it must be memorable. Vodacom's continuous presence across multiple screens ensures that it remains top of mind for consumers throughout their mall visit. This consistent exposure is key to achieving brand dominance, especially in a competitive retail environment where standing out is paramount.
+
+## The future of advertising
+
+The success of Vodacom Tanzania's campaign on our digital screen network underscores a fundamental shift in advertising strategies. It's clear that the future lies in creating immersive experiences that engage consumers on multiple levels. The strategic placement of digital screens plays a crucial role in this, offering a dynamic platform for brands to connect with their audience.
+
+The introduction of our digital screen network at Mlimani City Mall, and its role in Vodacom's device-financing campaign, highlights the transformative potential of strategic screen placement in advertising. As we move forward, the integration of innovative technology and creative marketing strategies will continue to redefine how brands engage with consumers. For those looking to leave a lasting impression, the message is clear: where you place your story matters just as much as the story itself.`,
+    related: [
+      { label: "Mall and retail advertising", href: "/mall-advertising-dar-es-salaam/" },
+      { label: "3D screens", href: "/3d-billboard-tanzania/" },
+    ],
+  },
+  {
+    slug: "unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen",
+    title: "Unveiling the extra dimension! Introducing Tanzania's first 3D screen",
+    date: "2024-01-26",
+    excerpt:
+      "The first ever 3D-ready screen at Mlimani City Mall, the heart of Dar es Salaam's retail and lifestyle buzz. This isn't just a screen — it's a revolution in how brands interact with their audiences.",
+    body: `**Redefining digital advertising in Tanzania.** The first ever 3D-ready screen at Mlimani City Mall, the heart of Dar es Salaam's retail and lifestyle buzz. This isn't just a screen; it's a revolution in how brands interact with their audiences.
+
+Ashton Media, with the largest digital out-of-home (DOOH) network in the country, has unveiled Tanzania's inaugural 3D screen at Mlimani City Mall, a premier shopping destination.
+
+## Introducing the 3D digital revolution at Mlimani City Mall
+
+In 2024 we step into the future with our state-of-the-art digital network. The flagship 3D screen at the main entrance of Mlimani City Mall is an immersive experience that captivates and engages audiences.
+
+## Key features
+
+**Pioneering 3D technology.** Vivid imagery that appears to emerge from the display surface, creating memorable visual encounters.
+
+**Prime location.** Positioned at the mall's main entrance to maximise visibility and audience reach.
+
+**High-quality display.** Four Ultra-High-Definition (UHD) screens complement the 3D display in high-traffic interior locations.
+
+## Why advertise with us?
+
+Unmatched visibility in frequently visited areas; engaging content through 3D and UHD technology; access to diverse demographics — families, young adults and professionals; and a place at the forefront of digital advertising innovation.`,
+    related: [
+      { label: "3D screens", href: "/3d-billboard-tanzania/" },
+      { label: "Mall and retail advertising", href: "/mall-advertising-dar-es-salaam/" },
+    ],
   },
 ];
 

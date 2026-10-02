@@ -1,10 +1,11 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BriefForm } from "@/components/BriefForm";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/content/site";
 
 export const metadata = pageMeta({
-  title: "Plan a Campaign: Two-Minute Brief | Ashton Media Tanzania",
+  title: "Plan a Campaign: Two-Minute Brief | Ashton Media",
   description:
     "Tell us what you want to achieve, where, when and roughly what you want to spend. You get a plan with sites, photographs and a quote from Ashton Media.",
   path: "/plan-a-campaign/",
@@ -34,7 +35,7 @@ export default async function PlanPage({ searchParams }: { searchParams: Promise
               <div className="frame p-5 md:p-6">
                 <h2 className="display-md text-lg">Rather talk?</h2>
                 <div className="mt-4 grid gap-3">
-                  <a href={site.whatsapp.url("Hi Ashton Media, I'd like to plan a campaign in Tanzania.")} data-track="whatsapp" className="btn btn-black">WhatsApp us</a>
+                  <WhatsAppLink text="Hi Ashton Media, I'd like to plan a campaign in Tanzania." className="btn btn-black">WhatsApp us</WhatsAppLink>
                   <a href={site.phone.tel} data-track="tel" className="btn btn-outline">Call {site.phone.display}</a>
                 </div>
                 <p className="mt-4 text-sm text-steel">Office hours are East Africa Time (UTC+3). Briefs sent overnight are answered when the office opens.</p>

@@ -1,196 +1,129 @@
 import Link from "next/link";
-import { NetworkMap } from "@/components/NetworkMap";
+import Image from "next/image";
+import { PhotoHero } from "@/components/PhotoHero";
 import { CtaBand } from "@/components/CtaBand";
 import { JsonLd } from "@/components/JsonLd";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { pageMeta } from "@/lib/seo";
-import { site, proof, cities, flagshipSites, clients, awards, bookingSteps } from "@/content/site";
-import { formats } from "@/content/formats";
-import { workByDate } from "@/content/work";
+import { site } from "@/content/site";
 
 export const metadata = pageMeta({
-  title: "Billboard Advertising in Tanzania | Ashton Media Tanzania",
+  title: "Billboard Advertising in Tanzania | Ashton Media",
   description:
-    "Tanzania's largest digital screen network, static billboards, exclusive advertising at JNIA Terminal 3 and Mlimani City. Since 2005. Plan a campaign.",
+    "Award-winning out-of-home advertising in Tanzania: the largest digital screen network, static billboards, airport, mobile and mall advertising. Advertise now.",
   path: "/",
 });
 
+const network = [
+  { label: "Static", href: "/static-billboards-tanzania/", image: "/images/tile-static.jpg", alt: "A static billboard above a busy market street in Dar es Salaam" },
+  { label: "Digital", href: "/digital-billboards-tanzania/", image: "/images/tile-digital.jpg", alt: "A digital LED screen on a main road at dusk" },
+  { label: "Airport", href: "/airport-advertising-tanzania/", image: "/images/tile-airport.jpg", alt: "A digital totem screen in the airport baggage hall" },
+  { label: "Mobile", href: "/mobile-screens-tanzania/", image: "/images/tile-mobile.jpg", alt: "A mobile LED screen mounted on a truck" },
+];
+
+const work = [
+  { src: "/images/work-1.jpg", alt: "A billboard campaign on a misty morning outside Dar es Salaam" },
+  { src: "/images/work-2.jpg", alt: "A Pepsi billboard between palm trees on a main road in Dar es Salaam" },
+  { src: "/images/work-3.jpg", alt: "A Coca-Cola billboard beside a flyover" },
+  { src: "/images/work-4.jpg", alt: "A digital totem in the airport baggage hall" },
+  { src: "/images/work-5.jpg", alt: "A digital screen above the airport escalators" },
+  { src: "/images/work-6.jpg", alt: "A back-lit board in the airport terminal" },
+];
+
 export default function HomePage() {
-  const featured = workByDate.slice(0, 4);
   return (
     <>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: site.name,
-          url: site.url,
-        }}
-      />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "WebSite", name: site.name, url: site.url }} />
 
-      {/* Hero */}
-      <section className="on-dark bg-black text-white">
-        <div className="mx-auto max-w-7xl px-4 pt-12 pb-10 md:px-8 md:pt-20 md:pb-16">
-          <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
-            <div className="lg:col-span-7">
-              <h1 className="display text-[2.6rem] sm:text-5xl lg:text-[4.75rem]">
-                Billboards and digital screens across Tanzania
-              </h1>
-              <p className="measure-wide mt-7 text-base text-white/85 md:text-xl">
-                Ashton Media owns and operates the country’s largest digital screen network, static
-                billboards in Dar es Salaam and upcountry, the exclusive advertising at JNIA Terminal 3,
-                and the screens at Mlimani City — including Tanzania’s first 3D screen. Since 2005.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link href="/plan-a-campaign/" className="btn btn-red">Plan a campaign</Link>
-                <Link href="/billboards-in-tanzania/" className="btn btn-outline-white">See the network</Link>
-              </div>
-              <p className="mt-5 text-sm text-white/75">
-                Or call <a href={site.phone.tel} data-track="tel" className="font-bold text-white underline underline-offset-4">{site.phone.display}</a>
-                {" "}· <a href={site.whatsapp.url("Hi Ashton Media, I'd like to talk about advertising in Tanzania.")} data-track="whatsapp" className="font-bold text-white underline underline-offset-4">WhatsApp</a>
-              </p>
-            </div>
-            <div className="lg:col-span-5">
-              <NetworkMap className="mx-auto w-full max-w-md lg:max-w-none" />
-            </div>
+      {/* Hero — the mockup's full-bleed photograph, one word, one button */}
+      <PhotoHero image="home" alt="A Pepsi billboard between palm trees on a main road in Dar es Salaam">
+        <div className="mx-auto flex min-h-[82svh] max-w-7xl flex-col items-center justify-center px-4 py-20 text-center md:px-8 md:py-28">
+          <p className="display text-[5.5rem] leading-none sm:text-[7rem] lg:text-[9rem]">Iconic</p>
+          <div className="mt-2 h-px w-48 bg-white sm:w-72" aria-hidden />
+          <h1 className="display-md mt-8 max-w-3xl text-xl text-white/95 sm:text-2xl md:text-3xl">
+            Billboards and digital screens across Tanzania
+          </h1>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <Link href="/plan-a-campaign/" className="btn btn-outline-white px-8 text-lg">Advertise now</Link>
+            <WhatsAppLink text="Hi Ashton Media, I'd like to talk about advertising in Tanzania." className="btn btn-outline-white px-6 text-lg">
+              WhatsApp
+            </WhatsAppLink>
           </div>
         </div>
-        <div className="border-t border-rule-dark">
-          <dl className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
-            {proof.map((p, i) => (
-              <div key={p.label} className={`px-4 py-6 md:px-8 md:py-8 ${i % 2 === 1 ? "border-l border-rule-dark" : ""} ${i >= 2 ? "border-t border-rule-dark md:border-t-0" : ""} ${i >= 1 ? "md:border-l" : ""}`}>
-                <dd className="num text-3xl md:text-4xl">{p.value}</dd>
-                <dt className="mt-2 text-sm text-white/75">{p.label}</dt>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
+      </PhotoHero>
 
-      {/* Formats */}
-      <section aria-labelledby="formats-heading" className="py-14 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <h2 id="formats-heading" className="display-md text-2xl md:text-3xl">Four ways to be seen</h2>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            {formats.map((f) => (
-              <Link key={f.slug} href={`/${f.slug}/`} className="frame group flex flex-col p-5 md:p-7 hover:bg-black hover:text-white transition-colors">
-                <span className="display-md text-xl md:text-2xl">{f.nav}</span>
-                <span className="measure mt-3 text-steel group-hover:text-white/80">{f.description.split(". ")[0]}.</span>
-                <span className="mt-5 text-sm font-bold underline underline-offset-4">See {f.nav.toLowerCase()}</span>
+      {/* Our network */}
+      <section aria-labelledby="network-heading" className="on-dark bg-black text-white">
+        <div className="mx-auto max-w-7xl px-4 pt-16 pb-6 text-center md:px-8 md:pt-24 md:pb-10">
+          <h2 id="network-heading" className="display rule-heading text-[2.6rem] md:text-6xl">Our network</h2>
+        </div>
+        <ul className="grid grid-cols-2 gap-px bg-black lg:grid-cols-4">
+          {network.map((n) => (
+            <li key={n.href} className="relative aspect-[3/4] lg:aspect-[9/13]">
+              <Link href={n.href} className="group absolute inset-0 block overflow-hidden">
+                <Image src={n.image} alt={n.alt} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+                <span className="absolute inset-x-0 bottom-0 flex justify-center pb-6 md:pb-8">
+                  <span className="box-label">{n.label}</span>
+                </span>
               </Link>
-            ))}
+            </li>
+          ))}
+        </ul>
+        <div className="mx-auto max-w-7xl px-4 py-8 text-center md:px-8 md:py-10">
+          <p className="text-white/80">Also on the network:</p>
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            <Link href="/mall-advertising-dar-es-salaam/" className="nav-box">Malls &amp; retail</Link>
+            <Link href="/3d-billboard-tanzania/" className="nav-box">3D screens</Link>
+            <Link href="/billboards-in-tanzania/" className="nav-box nav-box-fill">The whole network</Link>
           </div>
         </div>
       </section>
 
-      {/* Where */}
-      <section aria-labelledby="where-heading" className="bg-ash py-14 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="grid gap-10 lg:grid-cols-12">
-            <div className="lg:col-span-5">
-              <h2 id="where-heading" className="display-md text-2xl md:text-3xl">Where the network is</h2>
-              <p className="measure mt-4 text-steel">
-                Screens and sites in five places, with the largest share on the main roads of Dar es Salaam.
-                City pages with the full site list are being published; until then, ask for the current list with photographs.
-              </p>
-              <dl className="rows mt-8 border-t border-b border-rule">
-                {cities.map((c) => (
-                  <div key={c.slug} className="grid gap-1 py-4 sm:grid-cols-[11rem_1fr]">
-                    <dt className="font-bold">{c.name}</dt>
-                    <dd className="text-steel">{c.note}</dd>
-                  </div>
-                ))}
-              </dl>
+      {/* Why us */}
+      <section aria-labelledby="why-heading" className="on-dark bg-charcoal text-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
+          <div className="text-center">
+            <h2 id="why-heading" className="display rule-heading text-[2.6rem] md:text-6xl">Why us?</h2>
+          </div>
+          <div className="mt-12 grid gap-10 md:mt-16 md:grid-cols-12 md:items-center">
+            <div className="md:col-span-5">
+              <p className="display-light text-5xl md:text-6xl lg:text-7xl">To put it<br />simple</p>
+              <p className="display mt-6 text-5xl md:text-6xl lg:text-7xl">We<br />deliver!</p>
             </div>
-            <div className="lg:col-span-7">
-              <div className="frame bg-white p-5 md:p-7">
-                <h3 className="display-md text-xl">Flagship sites</h3>
-                <ul className="rows mt-4">
-                  {flagshipSites.map((s) => (
-                    <li key={s.name} className="flex items-baseline justify-between gap-4 py-3">
-                      <span>
-                        <span className="font-bold">{s.name}</span>
-                        <span className="text-steel"> — {s.place}</span>
-                      </span>
-                      <span className="flex-none text-sm font-semibold">{s.format}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <a href={site.whatsapp.url("Hi Ashton Media, please send the current site list with photos and rates.")} data-track="whatsapp" className="btn btn-outline">
-                    Get the site list on WhatsApp
-                  </a>
-                </div>
+            <div className="md:col-span-7 lg:col-span-6 lg:col-start-7">
+              <div className="space-y-5 text-lg leading-relaxed text-white/95">
+                <p>We dedicate all of our effort and expertise to getting you and your brand noticed while delivering a return on investment.</p>
+                <p>Our experienced advertising agency and team are committed to working in partnership with you to create effective campaigns that meet your objectives, provide the bang for the money you spend and drive sales and traffic to your door.</p>
+                <p>Basically, a big part of our story is driving results for businesses, big or small. Whether you’re a first-time advertiser or an established business, Ashton Media can help you engage your desired audience – both online and offline.</p>
               </div>
+              <p className="mt-6 text-sm text-white/70">
+                Award-winning — recognised by the industry internationally and voted for at home. <Link href="/awards/" className="underline underline-offset-4">The awards</Link>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Work */}
-      <section aria-labelledby="work-heading" className="py-14 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 id="work-heading" className="display-md text-2xl md:text-3xl">Work</h2>
-            <Link href="/work/" className="text-sm font-bold underline underline-offset-4">All case studies</Link>
+      {/* Our work */}
+      <section aria-labelledby="work-heading" className="on-dark bg-black text-white">
+        <div className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
+          <div className="text-center">
+            <h2 id="work-heading" className="display rule-heading text-[2.6rem] md:text-6xl">Our work</h2>
           </div>
-          <p className="measure mt-4 text-steel">
-            Trusted by {clients.slice(0, -1).join(", ")} and {clients[clients.length - 1]}.
-          </p>
-          <ul className="rows mt-8 border-t border-b border-rule">
-            {featured.map((w) => (
-              <li key={w.slug}>
-                <Link href={`/work/${w.slug}/`} className="group grid gap-2 py-5 md:grid-cols-12 md:items-baseline">
-                  <span className="text-sm font-bold md:col-span-2">{w.client}</span>
-                  <span className="display-md text-lg md:col-span-7 group-hover:underline underline-offset-4">{w.title}</span>
-                  <span className="text-sm text-steel md:col-span-3 md:text-right">{w.formats.join(" · ")}</span>
-                </Link>
+          <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:mt-16">
+            {work.map((w) => (
+              <li key={w.src} className="relative aspect-[16/9] overflow-hidden">
+                <Image src={w.src} alt={w.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Awards */}
-      <section aria-labelledby="awards-heading" className="on-dark bg-black text-white">
-        <div className="mx-auto max-w-7xl px-4 py-14 md:px-8 md:py-20">
-          <div className="flex flex-wrap items-end justify-between gap-4">
-            <h2 id="awards-heading" className="display-md text-2xl md:text-3xl">Four awards, including the industry’s own</h2>
-            <Link href="/awards/" className="text-sm font-bold underline underline-offset-4">About the awards</Link>
-          </div>
-          <ol className="mt-8 grid gap-px bg-rule-dark sm:grid-cols-2 lg:grid-cols-4">
-            {awards.map((a) => (
-              <li key={a.year} className="bg-black p-5 md:p-6">
-                <div className="num text-3xl">{a.year}</div>
-                <div className="mt-3 font-bold">{a.body}{a.place ? `, ${a.place}` : ""}</div>
-                <div className="mt-1 text-sm text-white/75">{a.category}</div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* How booking works */}
-      <section aria-labelledby="how-heading" className="py-14 md:py-20">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <h2 id="how-heading" className="display-md text-2xl md:text-3xl">How a campaign is booked</h2>
-          <ol className="mt-8 grid gap-6 md:grid-cols-3">
-            {bookingSteps.map((s, i) => (
-              <li key={s.name} className="border-t-[3px] border-black pt-4">
-                <div className="flex items-baseline gap-3">
-                  <span className="num text-2xl">{i + 1}</span>
-                  <h3 className="display-md text-lg">{s.name}</h3>
-                </div>
-                <p className="mt-2 text-steel">{s.text}</p>
-              </li>
-            ))}
-          </ol>
-          <div className="mt-8">
-            <Link href="/rates-and-booking/" className="btn btn-outline">Rates and how to book</Link>
+          <div className="mt-10 text-center">
+            <Link href="/blog/" className="nav-box">Campaign stories on the blog</Link>
           </div>
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand heading="Advertise now" text="Tell us where you want to be seen and when. A real person replies with sites, photographs and a quote — usually within a few hours on business days." briefLabel="Advertise now" />
     </>
   );
 }

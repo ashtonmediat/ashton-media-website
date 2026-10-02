@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: `Billboard Advertising in Tanzania | ${site.name}`,
-    template: `%s | ${site.shortName}`,
+    template: `%s | ${site.name}`,
   },
   description:
-    "Tanzania's largest digital screen network, static billboards, exclusive advertising at JNIA Terminal 3 and Mlimani City. Since 2005. Plan a campaign today.",
+    "Award-winning out-of-home advertising in Tanzania: the largest digital screen network, static billboards, airport and mall advertising. Plan a campaign.",
   applicationName: site.name,
   robots: { index: true, follow: true },
   openGraph: { siteName: site.name, locale: "en_TZ", type: "website" },

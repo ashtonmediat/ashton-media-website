@@ -1,10 +1,9 @@
 @import "tailwindcss";
-@import "@fontsource-variable/archivo/wdth.css";
 
 /*
-  Ashton Media Tanzania — design tokens
-  Black and white from the ASHTON wordmark; the award red as the single accent.
-  One family (Archivo) in two widths: expanded for headlines and numbers, normal for reading.
+  Ashton — design tokens, from the homepage mockup (Ashton website_homepage.ai):
+  black and white only, Helvetica, full-bleed photography, outlined boxes for
+  buttons and labels, headings with a rule beneath. Red is kept for error states.
 */
 @theme {
   --color-black: #000000;
@@ -16,7 +15,9 @@
   --color-rule: #d9d9d9;
   --color-rule-dark: #2a2a2a;
 
-  --font-sans: "Archivo Variable", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --color-charcoal: #2b2b2b;
 
   --text-xs: 0.8125rem;   /* 13 */
   --text-sm: 0.9375rem;   /* 15 */
@@ -46,46 +47,69 @@ body {
   color: var(--color-black);
   font-size: var(--text-base);
   line-height: 1.6;
-  font-variation-settings: "wdth" 100;
 }
 
-/* Headlines: expanded width, heavy weight, tight leading. */
+/* Headlines: Montserrat, heavy, tight leading. */
 .display {
-  font-variation-settings: "wdth" 125;
-  font-weight: 800;
-  letter-spacing: -0.015em;
-  line-height: 0.98;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.0;
   text-wrap: balance;
 }
 .display-md {
-  font-variation-settings: "wdth" 118;
-  font-weight: 750;
-  letter-spacing: -0.01em;
-  line-height: 1.05;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
   text-wrap: balance;
 }
+.display-light {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+}
 .num {
-  font-variation-settings: "wdth" 125;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-weight: 700;
   font-variant-numeric: tabular-nums lining-nums;
   letter-spacing: -0.02em;
   line-height: 1;
 }
 .wordmark {
-  font-variation-settings: "wdth" 112;
-  font-weight: 800;
-  letter-spacing: 0.32em;
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: 0.4em;
   text-transform: uppercase;
 }
-.wordmark-sub {
-  font-variation-settings: "wdth" 100;
-  font-weight: 500;
-  letter-spacing: 0.42em;
-  text-transform: uppercase;
+
+/* Section heading with the rule beneath it, as in the mockup. */
+.rule-heading { position: relative; display: inline-block; padding-bottom: 0.35em; }
+.rule-heading::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: currentColor; }
+.rule-heading-center { display: block; text-align: center; }
+.rule-heading-center::after { left: 15%; right: 15%; }
+
+/* Outlined label boxes (network tiles, nav) */
+.box-label {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.45rem 1rem; border: 2px solid #fff; color: #fff; background: rgba(0,0,0,0.25);
+  font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); line-height: 1.1; letter-spacing: -0.02em;
 }
-.condensed {
-  font-variation-settings: "wdth" 85;
+.nav-box {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem;
+  padding: 0.6rem 1.1rem; border: 2px solid #fff; color: #fff;
+  font-family: var(--font-display); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; line-height: 1;
+  transition: background-color 120ms ease, color 120ms ease;
 }
+.nav-box:hover { background: #fff; color: #000; }
+.nav-box-fill { background: #fff; color: #000; font-weight: 700; }
+.nav-box-fill:hover { background: #e6e6e6; }
+
+/* Photo hero */
+.photo-hero { position: relative; isolation: isolate; }
+.photo-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.photo-hero::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.55); z-index: -1; }
 
 /* Reading measure */
 .measure { max-width: 38rem; }
@@ -93,8 +117,8 @@ body {
 
 /* Prose for articles and long pages */
 .prose-ashton > * + * { margin-top: 1.1em; }
-.prose-ashton h2 { font-variation-settings: "wdth" 118; font-weight: 750; font-size: var(--text-xl); line-height: 1.15; margin-top: 2em; letter-spacing: -0.01em; }
-.prose-ashton h3 { font-weight: 700; font-size: var(--text-lg); line-height: 1.25; margin-top: 1.6em; }
+.prose-ashton h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-xl); line-height: 1.15; margin-top: 2em; letter-spacing: -0.015em; }
+.prose-ashton h3 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-lg); line-height: 1.25; margin-top: 1.6em; }
 .prose-ashton p, .prose-ashton li { max-width: 38rem; }
 .prose-ashton ul { padding-left: 1.25rem; list-style: disc; }
 .prose-ashton ol { padding-left: 1.25rem; list-style: decimal; }
@@ -105,27 +129,32 @@ body {
 .prose-ashton blockquote { border-left: 4px solid var(--color-black); padding-left: 1rem; font-size: var(--text-lg); line-height: 1.4; }
 
 /* Focus */
-:focus-visible { outline: 3px solid var(--color-red); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--color-black); outline-offset: 3px; }
 .on-dark :focus-visible { outline-color: var(--color-white); }
 
 /* Buttons */
 .btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
   min-height: 3rem; padding: 0.75rem 1.25rem;
-  font-weight: 700; font-size: var(--text-sm); line-height: 1.1;
+  font-family: var(--font-display); font-weight: 700; font-size: var(--text-base); line-height: 1.1; letter-spacing: -0.01em;
   border: 2px solid currentColor; text-decoration: none; cursor: pointer;
   transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
 }
-.btn-red { background: var(--color-red); border-color: var(--color-red); color: var(--color-white); }
-.btn-red:hover { background: var(--color-red-deep); border-color: var(--color-red-deep); }
+/* Primary action: black on light surfaces, white on dark ones (.on-dark sets the variables). */
+.btn-primary { background: var(--btn-bg, #000); border-color: var(--btn-bg, #000); color: var(--btn-fg, #fff); }
+.btn-primary:hover { background: var(--btn-bg-hover, #262626); border-color: var(--btn-bg-hover, #262626); }
+.on-dark { --btn-bg: #fff; --btn-fg: #000; --btn-bg-hover: #e6e6e6; }
 .btn-black { background: var(--color-black); border-color: var(--color-black); color: var(--color-white); }
 .btn-black:hover { background: #262626; border-color: #262626; }
+
 .btn-white { background: var(--color-white); border-color: var(--color-white); color: var(--color-black); }
 .btn-white:hover { background: var(--color-ash); border-color: var(--color-ash); }
 .btn-outline { background: transparent; color: var(--color-black); }
 .btn-outline:hover { background: var(--color-black); color: var(--color-white); }
 .btn-outline-white { background: transparent; color: var(--color-white); }
 .btn-outline-white:hover { background: var(--color-white); color: var(--color-black); }
+
+.wa-icon { width: 1.25em; height: 1.25em; flex: none; }
 
 /* The billboard frame: a thick black border is the structural device of the site. */
 .frame { border: 3px solid var(--color-black); }
@@ -141,12 +170,12 @@ body {
   border: 2px solid var(--color-black); background: var(--color-white); color: var(--color-black);
   font-size: var(--text-base); line-height: 1.3; border-radius: 0;
 }
-.field:focus { outline: 3px solid var(--color-red); outline-offset: 2px; }
+.field:focus { outline: 3px solid var(--color-black); outline-offset: 2px; }
 .field::placeholder { color: #8a8a8a; }
 textarea.field { min-height: 8rem; resize: vertical; }
 select.field { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #000 50%), linear-gradient(135deg, #000 50%, transparent 50%); background-position: calc(100% - 1.25rem) 1.3rem, calc(100% - 0.9rem) 1.3rem; background-size: 0.4rem 0.4rem; background-repeat: no-repeat; padding-right: 2.5rem; }
 .check { display: flex; gap: 0.6rem; align-items: flex-start; min-height: 2.75rem; padding: 0.4rem 0; cursor: pointer; }
-.check input { width: 1.25rem; height: 1.25rem; margin-top: 0.15rem; accent-color: var(--color-red); flex: none; }
+.check input { width: 1.25rem; height: 1.25rem; margin-top: 0.15rem; accent-color: var(--color-black); flex: none; }
 label.lbl { display: block; font-weight: 700; font-size: var(--text-sm); margin-bottom: 0.4rem; }
 
 /* Sticky mobile contact bar */
@@ -161,4 +190,4 @@ label.lbl { display: block; font-weight: 700; font-size: var(--text-sm); margin-
 }
 
 /* Tap targets */
-a, button { -webkit-tap-highlight-color: rgba(227, 0, 27, 0.15); }
+a, button { -webkit-tap-highlight-color: rgba(0, 0, 0, 0.15); }

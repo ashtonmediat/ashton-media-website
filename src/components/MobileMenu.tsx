@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { site } from "@/content/site";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function MobileMenu({ items }: { items: { label: string; href: string }[] }) {
   const ref = useRef<HTMLDialogElement>(null);
@@ -16,10 +17,10 @@ export function MobileMenu({ items }: { items: { label: string; href: string }[]
     return () => d.removeEventListener("click", onClick);
   }, []);
   return (
-    <div className="xl:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
-        className="btn btn-outline"
+        className="nav-box"
         aria-haspopup="dialog"
         onClick={() => ref.current?.showModal()}
       >
@@ -28,16 +29,16 @@ export function MobileMenu({ items }: { items: { label: string; href: string }[]
       <dialog
         ref={ref}
         aria-label="Site menu"
-        className="m-0 h-full max-h-none w-full max-w-none bg-white p-0 backdrop:bg-black/60"
+        className="on-dark m-0 h-full max-h-none w-full max-w-none bg-black p-0 text-white backdrop:bg-black/60"
       >
         <div className="flex min-h-full flex-col">
-          <div className="flex items-center justify-between border-b-[3px] border-black px-4 py-3">
-            <span className="wordmark text-lg">Ashton</span>
-            <button type="button" className="btn btn-outline" onClick={() => ref.current?.close()}>
+          <div className="flex items-center justify-between border-b border-rule-dark px-4 py-5">
+            <span className="wordmark text-xl text-white">Ashton</span>
+            <button type="button" className="nav-box" onClick={() => ref.current?.close()}>
               Close
             </button>
           </div>
-          <nav aria-label="Main" className="rows flex-1 px-4">
+          <nav aria-label="Main" className="rows-dark flex-1 px-4">
             {items.map((n) => (
               <Link
                 key={n.href}
@@ -49,14 +50,14 @@ export function MobileMenu({ items }: { items: { label: string; href: string }[]
               </Link>
             ))}
           </nav>
-          <div className="grid gap-3 border-t-[3px] border-black p-4">
-            <Link href="/plan-a-campaign/" className="btn btn-red" onClick={() => ref.current?.close()}>
-              Plan a campaign
+          <div className="grid gap-3 border-t border-rule-dark p-4">
+            <Link href="/plan-a-campaign/" className="btn btn-primary" onClick={() => ref.current?.close()}>
+              Advertise now
             </Link>
-            <a href={site.whatsapp.url("Hi Ashton Media, I'd like to talk about advertising in Tanzania.")} className="btn btn-outline" data-track="whatsapp">
+            <WhatsAppLink text="Hi Ashton Media, I'd like to talk about advertising in Tanzania." className="btn btn-outline-white">
               WhatsApp us
-            </a>
-            <a href={site.phone.tel} className="btn btn-outline" data-track="tel">
+            </WhatsAppLink>
+            <a href={site.phone.tel} className="btn btn-outline-white" data-track="tel">
               Call {site.phone.display}
             </a>
           </div>

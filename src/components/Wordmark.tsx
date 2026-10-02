@@ -1,16 +1,27 @@
 import Link from "next/link";
+import Image from "next/image";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+
+const LOGO_LIGHT = "/brand/ashton-logo.png"; // black mark, for white backgrounds
+const LOGO_DARK = "/brand/ashton-logo-white.png"; // white mark, for black backgrounds
+const hasLogo = existsSync(join(process.cwd(), "public", LOGO_LIGHT));
+const hasDarkLogo = existsSync(join(process.cwd(), "public", LOGO_DARK));
 
 /**
- * Typographic rendering of the ASHTON wordmark until the logo artwork is restored.
- * Swap the inner markup for an <Image> of the SVG when it arrives; keep the link and label.
+ * The ASHTON wordmark. Uses the artwork in /public/brand (currently cut from the
+ * design mockup; replace with the vector logo when it arrives — same file names).
  */
 export function Wordmark({ dark = false, size = "md" }: { dark?: boolean; size?: "md" | "lg" }) {
-  const main = size === "lg" ? "text-2xl" : "text-lg";
-  const sub = size === "lg" ? "text-xs" : "text-[0.6rem]";
+  const h = size === "lg" ? 30 : 24;
+  const src = dark ? (hasDarkLogo ? LOGO_DARK : null) : hasLogo ? LOGO_LIGHT : null;
   return (
-    <Link href="/" aria-label="Ashton Media Tanzania — home" className="inline-flex flex-col leading-none whitespace-nowrap">
-      <span className={`wordmark ${main} ${dark ? "text-white" : "text-black"}`}>Ashton</span>
-      <span className={`wordmark-sub ${sub} ${dark ? "text-white/80" : "text-steel"} mt-1`}>Media Tanzania</span>
+    <Link href="/" aria-label="Ashton — home" className="inline-flex items-center whitespace-nowrap">
+      {src ? (
+        <Image src={src} alt="Ashton" height={h} width={Math.round(h * 4.18)} priority style={{ height: h, width: "auto" }} />
+      ) : (
+        <span className={`wordmark ${size === "lg" ? "text-2xl" : "text-xl"} ${dark ? "text-white" : "text-black"}`}>Ashton</span>
+      )}
     </Link>
   );
 }

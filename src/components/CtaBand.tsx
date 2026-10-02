@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { site } from "@/content/site";
+import { WhatsAppLink } from "./WhatsAppLink";
 
 export function CtaBand({
   heading = "Tell us what you want to achieve",
   text = "A real person replies — usually within a few hours on business days. Say where you want to be seen and when, and we'll come back with sites, photos and a quote.",
   whatsappText = "Hi Ashton Media, I'd like to plan a campaign in Tanzania.",
-  briefLabel = "Plan a campaign",
+  briefLabel = "Advertise now",
 }: {
   heading?: string;
   text?: string;
@@ -22,8 +23,8 @@ export function CtaBand({
           </div>
           <div className="md:col-span-5 md:justify-self-end">
             <div className="flex flex-wrap gap-3">
-              <Link href="/plan-a-campaign/" className="btn btn-red">{briefLabel}</Link>
-              <a href={site.whatsapp.url(whatsappText)} data-track="whatsapp" className="btn btn-white">WhatsApp us</a>
+              <Link href="/plan-a-campaign/" className="btn btn-primary">{briefLabel}</Link>
+              <WhatsAppLink text={whatsappText} className="btn btn-white">WhatsApp us</WhatsAppLink>
             </div>
             <p className="mt-4 text-sm text-white/80">
               Or call <a href={site.phone.tel} data-track="tel" className="font-bold text-white underline underline-offset-4">{site.phone.display}</a>

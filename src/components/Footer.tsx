@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Wordmark } from "./Wordmark";
-import { site, awards } from "@/content/site";
+import { WhatsAppLink } from "./WhatsAppLink";
+import { site } from "@/content/site";
 
 const cols = [
   {
@@ -8,8 +9,9 @@ const cols = [
     links: [
       { label: "Digital screens", href: "/digital-billboards-tanzania/" },
       { label: "Static billboards", href: "/static-billboards-tanzania/" },
-      { label: "Airport — JNIA Terminal 3", href: "/airport-advertising-tanzania/" },
-      { label: "Malls and 3D screens", href: "/mall-advertising-dar-es-salaam/" },
+      { label: "Airport advertising", href: "/airport-advertising-tanzania/" },
+      { label: "Malls and retail", href: "/mall-advertising-dar-es-salaam/" },
+      { label: "3D screens", href: "/3d-billboard-tanzania/" },
     ],
   },
   {
@@ -25,10 +27,9 @@ const cols = [
   {
     heading: "Company",
     links: [
-      { label: "About Ashton Media", href: "/about/" },
+      { label: "About Ashton", href: "/about/" },
       { label: "Awards", href: "/awards/" },
-      { label: "Work", href: "/work/" },
-      { label: "Insights", href: "/insights/" },
+      { label: "Blog", href: "/blog/" },
       { label: "Contact", href: "/contact/" },
       { label: "Privacy", href: "/privacy/" },
     ],
@@ -43,8 +44,7 @@ export function Footer() {
           <div className="md:col-span-5">
             <Wordmark dark size="lg" />
             <p className="measure mt-5 text-white/80">
-              Tanzania’s largest digital screen network, static billboards in Dar es Salaam and upcountry,
-              exclusive advertising at JNIA Terminal 3, and the screens at Mlimani City. Since {site.founded}.
+              Award-winning out-of-home advertising: digital screens, static billboards, airport and mall sites across Tanzania.
             </p>
             <address className="mt-6 not-italic text-white/90">
               <div>{site.address.street}</div>
@@ -52,7 +52,12 @@ export function Footer() {
               <div className="mt-3">
                 <a href={site.phone.tel} data-track="tel" className="font-bold underline underline-offset-4">{site.phone.display}</a>
               </div>
-              <div>
+              <div className="mt-1">
+                <WhatsAppLink text="Hi Ashton Media, I'd like to talk about advertising in Tanzania." className="inline-flex items-center gap-2 font-bold underline underline-offset-4">
+                  WhatsApp us
+                </WhatsAppLink>
+              </div>
+              <div className="mt-1">
                 <a href={`mailto:${site.email}`} className="underline underline-offset-4">{site.email}</a>
               </div>
             </address>
@@ -75,11 +80,8 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-12 border-t border-rule-dark pt-6 text-xs text-white/70 md:flex md:items-start md:justify-between md:gap-8">
-          <p className="measure-wide">
-            {awards.map((a) => `${a.body} ${a.year}`).join(" · ")}
-          </p>
-          <p className="mt-3 md:mt-0">© {new Date().getFullYear()} {site.legalName}</p>
+        <div className="mt-12 border-t border-rule-dark pt-6 text-xs text-white/70">
+          <p>© {new Date().getFullYear()} {site.legalName}</p>
         </div>
       </div>
     </footer>

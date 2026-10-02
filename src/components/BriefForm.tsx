@@ -6,7 +6,7 @@ import { useState } from "react";
 import { cities } from "@/content/site";
 
 const OBJECTIVES = ["Launch", "Awareness", "Promotion", "Event", "Always-on"];
-const MEDIUMS = ["Any — recommend a mix", "Digital screens", "Static billboards", "Airport (JNIA T3)", "Malls", "3D screen"];
+const MEDIUMS = ["Any — recommend a mix", "Digital screens", "Static billboards", "Airport", "Malls and retail", "3D screen"];
 const DURATIONS = ["2 weeks", "1 month", "3 months", "6 months", "12 months", "Not sure yet"];
 const CREATIVE = ["We have artwork", "We need design", "Not sure yet"];
 
@@ -157,7 +157,7 @@ export function BriefForm({ site: siteName }: { site?: string }) {
         <p role="alert" className="border-2 border-red px-4 py-3 text-sm font-semibold">{error}</p>
       )}
       <div className="flex flex-wrap items-center gap-4">
-        <button type="submit" className="btn btn-red" disabled={state === "sending"}>
+        <button type="submit" className="btn btn-primary" disabled={state === "sending"}>
           {state === "sending" ? "Sending…" : "Send the brief"}
         </button>
         <span className="text-sm text-steel">You’ll get a plan with sites, photos and a quote — usually within a few hours on business days.</span>

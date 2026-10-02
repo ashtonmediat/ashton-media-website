@@ -3,8 +3,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CtaBand } from "@/components/CtaBand";
 import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { pageMeta, faqLd } from "@/lib/seo";
-import { site, bookingSteps } from "@/content/site";
+import { bookingSteps } from "@/content/site";
 
 export const metadata = pageMeta({
   title: "Billboard Rates & How to Book in Tanzania | Ashton Media",
@@ -16,7 +17,7 @@ export const metadata = pageMeta({
 const faqs = [
   { q: "How do I get the rate card?", a: "Ask for it on WhatsApp or by email, or send a brief and it comes with the proposal. It covers digital screens, static billboards, the airport and Mlimani City." },
   { q: "What does a quote include?", a: "Everything the campaign needs from us: the sites or screens for the period, and for static sites the print, installation and posting photograph. Creative design is quoted separately if you need it." },
-  { q: "How far ahead should I book?", a: "Flagship sites and the airport are booked ahead by regular advertisers, so the earlier the better. Digital screens can go live quickly once artwork is approved. Tell us the date and we plan backwards." },
+  { q: "How far ahead should I book?", a: "Landmark sites and the airport are booked ahead by regular advertisers, so the earlier the better. Digital screens can go live quickly once artwork is approved. Tell us the date and we plan backwards." },
   { q: "Do you work with media agencies?", a: "Yes — most national campaigns on the network are planned by agencies. Ask for agency terms, the site list and specifications." },
   { q: "Can I pay in US dollars from outside Tanzania?", a: "Tell us where you are and we will quote in the currency that works for you." },
   { q: "What artwork specifications do I need?", a: "Each site and screen has its own. We send the specifications with the quote and check your files before anything goes up." },
@@ -35,7 +36,7 @@ export default function RatesPage() {
             every proposal, or on request.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href={site.whatsapp.url("Hi Ashton Media, please send the current rate card.")} data-track="whatsapp" className="btn btn-red">Request the rate card</a>
+            <WhatsAppLink text="Hi Ashton Media, please send the current rate card." className="btn btn-primary">Request the rate card</WhatsAppLink>
             <Link href="/plan-a-campaign/" className="btn btn-outline">Send a brief</Link>
           </div>
         </div>

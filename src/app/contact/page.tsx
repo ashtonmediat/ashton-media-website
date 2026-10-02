@@ -1,10 +1,11 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { EnquiryForm } from "@/components/EnquiryForm";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/content/site";
 
 export const metadata = pageMeta({
-  title: "Contact Ashton Media Tanzania | Call, WhatsApp or Brief",
+  title: "Contact Ashton Media | Call, WhatsApp or Send a Brief",
   description:
     "Call +255 758 880 088, WhatsApp, or send a message. Ashton Media, Plot No. 4 New Bagamoyo Road, Dar es Salaam. Billboards, screens, airport and malls.",
   path: "/contact/",
@@ -28,7 +29,7 @@ export default function ContactPage() {
           <div className="grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <div className="grid gap-3">
-                <a href={site.whatsapp.url("Hi Ashton Media, I'd like to talk about advertising in Tanzania.")} data-track="whatsapp" className="btn btn-red justify-start">WhatsApp {site.phone.display}</a>
+                <WhatsAppLink text="Hi Ashton Media, I'd like to talk about advertising in Tanzania." className="btn btn-primary justify-start">WhatsApp {site.phone.display}</WhatsAppLink>
                 <a href={site.phone.tel} data-track="tel" className="btn btn-outline justify-start">Call {site.phone.display}</a>
                 <a href={`mailto:${site.email}`} data-track="email" className="btn btn-outline justify-start">Email {site.email}</a>
               </div>

@@ -4,9 +4,9 @@ import { pageMeta } from "@/lib/seo";
 import { awards } from "@/content/site";
 
 export const metadata = pageMeta({
-  title: "Awards: DailyDOOH 2018, Consumer Choice 2023–25 | Ashton",
+  title: "Awards and Recognition | Ashton Media",
   description:
-    "Ashton Media's awards: the DailyDOOH Gala Award in London (2018) for the 3D Digital Coke Bottle, and Consumer Choice Awards Africa in 2023, 2024 and 2025.",
+    "Ashton Media's awards: the DailyDOOH Gala Award in London for the 3D Digital Coke Bottle, and Consumer Choice Awards Africa three years running.",
   path: "/awards/",
 });
 
@@ -18,8 +18,7 @@ export default function AwardsPage() {
           <Breadcrumbs items={[{ name: "Awards", path: "/awards/" }]} />
           <h1 className="display mt-6 text-[2.4rem] sm:text-4xl lg:text-5xl">Awards and recognition</h1>
           <p className="measure-wide mt-5 text-lg text-steel">
-            Four awards between 2018 and 2025 — one from the digital out-of-home industry itself, judged in London,
-            and three consecutive years of a consumer-voted national award.
+            Recognised by the digital out-of-home industry internationally, judged in London, and voted for by consumers at home three years running.
           </p>
         </div>
       </section>
