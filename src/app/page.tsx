@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 py-8 text-center md:px-8 md:py-10">
           <p className="text-white/80">Also on the network:</p>
           <div className="mt-4 flex flex-wrap justify-center gap-3">
-            <Link href="/mall-advertising-dar-es-salaam/" className="nav-box">Malls &amp; retail</Link>
+            <Link href="/mall-advertising-tanzania/" className="nav-box">Malls &amp; retail</Link>
             <Link href="/airport-advertising-tanzania/" className="nav-box">Airports</Link>
             <Link href="/mobile-screens-tanzania/" className="nav-box">Mobile screens</Link>
             <Link href="/billboards-in-tanzania/" className="nav-box nav-box-fill">The whole network</Link>

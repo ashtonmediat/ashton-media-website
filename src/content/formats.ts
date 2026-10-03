@@ -42,7 +42,7 @@ export const formats: FormatPage[] = [
       {
         heading: "Where the screens are",
         body: [
-          "The network is concentrated where Dar es Salaam's traffic is: Selander Bridge, Chole Junction in Masaki, Mlimani City, Nyerere Road, Bagamoyo Road, and the main roads between them. Screens in Dodoma, Mwanza and Zanzibar carry national campaigns beyond the city.",
+          "The network is concentrated where Dar es Salaam's traffic is: Selander Bridge, Chole Junction in Masaki, Nyerere Road, Bagamoyo Road, the major malls, and the main roads between them. Screens in Dodoma, Mwanza and Zanzibar carry national campaigns beyond the city.",
           "Ask and we will send the current site list with photographs and locations.",
         ],
       },
@@ -56,7 +56,7 @@ export const formats: FormatPage[] = [
     ],
     related: ["our-latest-dooh-upgrade-at-chole-junction-masaki-dar-es-salaam", "why-tanzanian-advertisers-have-increased-their-visibility-on-digital-out-of-home-advertising-in-2024", "the-rule-of-7-the-power-of-high-frequency"],
     faqs: [
-      { q: "Where are Ashton Media's digital screens?", a: "Across Dar es Salaam — Selander Bridge, Chole Junction, Mlimani City and the main roads between them — and in Zanzibar, Dodoma and Mwanza. It is the largest digital out-of-home network in the country, and it is still growing." },
+      { q: "Where are Ashton Media's digital screens?", a: "Across Dar es Salaam — Selander Bridge, Chole Junction, the main roads and the major malls — and in Zanzibar, Dodoma and Mwanza. It is the largest digital out-of-home network in the country, and it is still growing." },
       { q: "Can I book a single screen?", a: "Yes. Many campaigns start with one landmark screen — Selander Bridge or Chole Junction, for example — and add screens as they grow." },
       { q: "What creative do I need to supply?", a: "A still image or a short video made to each screen's specifications. We send the specifications with the quote, and we can design the creative if you need it." },
       { q: "How quickly can a digital campaign go live?", a: "Once the artwork is approved, usually a matter of seconds — the screens are updated remotely, so a campaign can start the moment it is signed off." },
@@ -71,8 +71,8 @@ export const formats: FormatPage[] = [
     short: "Own a road, every hour of the day. Sites on the main roads of Dar es Salaam and upcountry, with print and installation included.",
     title: "Static Billboards in Tanzania | Ashton Media",
     description:
-      "Static billboards and large-format sites in Dar es Salaam and upcountry Tanzania. Print, installation and posting by one team. Request the site list.",
-    h1: "Static billboards in Dar es Salaam and across Tanzania",
+      "Static billboards and large-format sites across Tanzania — Dar es Salaam and upcountry. Print, installation and posting by one team. Request the site list.",
+    h1: "Static billboards across Tanzania",
     lead:
       "A static billboard is still the simplest way to own a road. Ashton Media's static sites sit on the routes Dar es Salaam drives every day, and the same team handles the print, the installation and the posting, so one quote covers the whole job.",
     sections: [
@@ -98,7 +98,7 @@ export const formats: FormatPage[] = [
       { q: "Is printing included in the price?", a: "We quote the whole job — site, print, installation and posting — so you see one number. Tell us if you already have print and we will quote the site alone." },
       { q: "What is the minimum booking period?", a: "It depends on the site. Tell us your dates and we will say what is possible." },
       { q: "Can I combine static billboards with digital screens?", a: "Yes, and most brand campaigns do. A static site holds the message all day; the digital screens on the same route add motion, timing and change." },
-      { q: "Do you handle permits and installation?", a: "Yes. Our team in Dar es Salaam handles the site, the production and the installation end to end." },
+      { q: "Do you handle permits and installation?", a: "Yes. Our own team handles the site, the production and the installation end to end." },
     ],
     cta: { label: "Request the static site list", whatsapp: "Hi Ashton Media, please send the static billboard site list and rates." },
   },
@@ -191,21 +191,21 @@ export const formats: FormatPage[] = [
     cta: { label: "Ask about SGR advertising", whatsapp: "Hi Ashton Media, I'm interested in advertising at the SGR terminals. Please send the placement map and rates." },
   },
   {
-    slug: "mall-advertising-dar-es-salaam",
+    slug: "mall-advertising-tanzania",
     nav: "Malls & retail",
     short: "Screens at the entrance and through the mall, and digital signage inside stores. Reach shoppers at the moment of decision.",
-    title: "Mall Advertising in Dar es Salaam | Ashton Media",
+    title: "Mall and Retail Advertising in Tanzania | Ashton Media",
     description:
-      "Mall and retail advertising in Dar es Salaam: screens at the entrance of Mlimani City and through the mall, and digital signage inside retail spaces.",
-    h1: "Mall and retail advertising in Dar es Salaam",
+      "Mall and retail advertising across Tanzania: screens at the entrances of the major malls and through them, and digital signage inside retail spaces. Reach shoppers at the point of decision.",
+    h1: "Mall and retail advertising in Tanzania",
     lead:
-      "A mall is where people arrive ready to buy. Ashton Media's screens at Mlimani City — Dar es Salaam's busiest mall — greet shoppers at the door and follow them to the shop, and its retail digital signage carries a brand right onto the shop floor.",
+      "A mall is where people arrive ready to buy. Ashton's screens in the major malls greet shoppers at the door and follow them to the shop, and its retail digital signage carries a brand right onto the shop floor.",
     sections: [
       {
-        heading: "The Mlimani City network",
+        heading: "Screens in the major malls",
         body: [
-          "A screen at the main entrance is the first thing a visitor sees — it is also Tanzania's first 3D screen. Inside, four Ultra-HD screens in the highest-traffic positions continue the message.",
-          "Vodacom Tanzania's device-financing campaign used the whole network to carry one story from the entrance to the point of purchase.",
+          "An entrance screen is the first thing a visitor sees — one of ours is Tanzania's first 3D screen. Inside, Ultra-HD screens in the highest-traffic positions carry the message from the door to the point of purchase.",
+          "Vodacom Tanzania's device-financing campaign used a whole mall network to carry one story from the entrance to the shop.",
         ],
       },
       {
@@ -218,10 +218,10 @@ export const formats: FormatPage[] = [
     ],
     related: ["how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania", "unveiling-the-extra-dimension-introducing-tanzanias-first-3d-screen"],
     faqs: [
-      { q: "Which malls can I advertise in?", a: "Mlimani City in Dar es Salaam, with a screen at the main entrance and four UHD screens inside. Ask about other locations — the network grows." },
-      { q: "Can I advertise inside Mlimani City without the entrance screen?", a: "Yes. The four UHD screens inside the mall can be booked on their own." },
+      { q: "Which malls can I advertise in?", a: "The major malls and retail spaces in Tanzania. Ask for the current list — it comes with photographs and positions, and the network grows." },
+      { q: "Can I book the screens inside a mall without the entrance screen?", a: "Yes. The screens inside a mall can be booked on their own, and so can an entrance screen." },
       { q: "Do you install screens in shops and petrol stations?", a: "Yes. Ashton designs, installs and runs digital signage in retail spaces." },
-      { q: "What creative do mall screens take?", a: "A still or a short video to the screen's specification. The entrance screen can also run 3D creative, which we can produce with you." },
+      { q: "What creative do mall screens take?", a: "A still or a short video to the screen's specification. Some entrance screens can also run 3D creative, which we can produce with you." },
     ],
     cta: { label: "Ask about mall advertising", whatsapp: "Hi Ashton Media, I'm interested in mall and retail screens. Please send details and rates." },
   },

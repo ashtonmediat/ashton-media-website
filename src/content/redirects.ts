@@ -22,6 +22,7 @@ export const redirectMap: { from: string; to: string }[] = [
   { from: "/tanzania/:path*", to: "/advertising-in-tanzania/" },
 
   // Addresses that existed briefly on the first version of this site (2 Oct 2026)
+  { from: "/mall-advertising-dar-es-salaam", to: "/mall-advertising-tanzania/" },
   { from: "/insights", to: "/blog/" },
   { from: "/insights/:slug", to: "/blog/:slug/" },
   { from: "/work", to: "/blog/" },

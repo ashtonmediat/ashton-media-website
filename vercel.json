@@ -81,6 +81,16 @@
       "permanent": true
     },
     {
+      "source": "/mall-advertising-dar-es-salaam",
+      "destination": "https://www.ashtonmedia.net/mall-advertising-tanzania/",
+      "permanent": true
+    },
+    {
+      "source": "/mall-advertising-dar-es-salaam/",
+      "destination": "https://www.ashtonmedia.net/mall-advertising-tanzania/",
+      "permanent": true
+    },
+    {
       "source": "/insights",
       "destination": "https://www.ashtonmedia.net/blog/",
       "permanent": true

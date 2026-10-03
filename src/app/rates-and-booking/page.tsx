@@ -15,7 +15,7 @@ export const metadata = pageMeta({
 });
 
 const faqs = [
-  { q: "How do I get the rate card?", a: "Ask for it on WhatsApp or by email, or send a brief and it comes with the proposal. It covers digital screens, static billboards, the airport and Mlimani City." },
+  { q: "How do I get the rate card?", a: "Ask for it on WhatsApp or by email, or send a brief and it comes with the proposal. It covers digital screens, static billboards, airports, SGR terminals and malls." },
   { q: "What does a quote include?", a: "Everything the campaign needs from us: the sites or screens for the period, and for static sites the print, installation and posting photograph. Creative design is quoted separately if you need it." },
   { q: "How far ahead should I book?", a: "Landmark sites and the airport are booked ahead by regular advertisers, so the earlier the better. Digital screens can go live quickly once artwork is approved. Tell us the date and we plan backwards." },
   { q: "Do you work with media agencies?", a: "Yes — most national campaigns on the network are planned by agencies. Ask for agency terms, the site list and specifications." },

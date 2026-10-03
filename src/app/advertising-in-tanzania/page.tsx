@@ -12,7 +12,7 @@ import { getPost } from "@/content/posts";
 export const metadata = pageMeta({
   title: "Advertising in Tanzania for International Brands | Ashton",
   description:
-    "Entering Tanzania? One partner for billboards, digital screens, airport and malls: sites, production, permits and installation handled in Dar es Salaam.",
+    "Entering Tanzania? One partner for billboards, digital screens, airports, SGR and malls: sites, production, permits and installation handled by our own team on the ground.",
   path: "/advertising-in-tanzania/",
   image: "/og/advertising-in-tanzania.jpg",
 });
@@ -57,8 +57,8 @@ export default function InternationalPage() {
             <div className="lg:col-span-8">
               <h2 className="display-md text-2xl md:text-3xl">What you get from one brief</h2>
               <div className="mt-6 space-y-4">
-                <p className="measure-wide">A plan with the sites that fit — photographs, locations, formats — and one quote for the whole campaign, in dollars if you prefer. Production and installation are done by our own team in Dar es Salaam, permits included.</p>
-                <p className="measure-wide">A launch can own the arrivals at the international airport, the main junctions of Dar es Salaam and the entrance of Mlimani City in the same week, then carry on upcountry on the digital network.</p>
+                <p className="measure-wide">A plan with the sites that fit — photographs, locations, formats — and one quote for the whole campaign, in dollars if you prefer. Production and installation are done by our own team on the ground in Tanzania, permits included.</p>
+                <p className="measure-wide">A launch can own the arrivals at the international airports, the main junctions of Dar es Salaam and the entrances of the major malls in the same week, then carry on upcountry on the digital network and at the SGR terminals.</p>
                 <p className="measure-wide">Proof when it is live: photographs of every static posting and proof of play for every screen.</p>
               </div>
               <h2 className="display-md mt-12 text-2xl md:text-3xl">Brands that have launched with us</h2>
@@ -80,7 +80,7 @@ export default function InternationalPage() {
                   <li><strong>Award-winning</strong> — including the DailyDOOH award in London</li>
                   <li><strong>The largest digital screen network</strong> in Tanzania</li>
                   <li><strong>Airports and rail</strong> — JNIA, Kilimanjaro, Arusha, Mwanza, Dodoma and the SGR terminals</li>
-                  <li><strong>Tanzania’s first 3D screen</strong>, Mlimani City</li>
+                  <li><strong>Tanzania’s first 3D screen</strong></li>
                   <li><strong>Permits, production and installation</strong> by our own team</li>
                 </ul>
                 <div className="mt-5 grid gap-3">
@@ -93,7 +93,7 @@ export default function InternationalPage() {
       </section>
 
       <Faq items={faqs} />
-      <CtaBand heading="Brief us from anywhere; the plan comes back from Dar es Salaam" briefLabel="Brief us" whatsappText="Hello Ashton Media, we are planning a campaign in Tanzania from abroad." />
+      <CtaBand heading="Brief us from anywhere; the plan comes back from our team on the ground" briefLabel="Brief us" whatsappText="Hello Ashton Media, we are planning a campaign in Tanzania from abroad." />
     </>
   );
 }

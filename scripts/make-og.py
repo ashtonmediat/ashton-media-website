@@ -22,7 +22,7 @@ PAGES = {
     "static-billboards-tanzania": "static-billboards-tanzania",
     "airport-advertising-tanzania": "airport-advertising-tanzania",
     "sgr-advertising-tanzania": "sgr-advertising-tanzania",
-    "mall-advertising-dar-es-salaam": "mall-advertising-dar-es-salaam",
+    "mall-advertising-tanzania": "mall-advertising-tanzania",
     "mobile-screens-tanzania": "mobile-screens-tanzania",
     "about": "about",
     "advertising-in-tanzania": "advertising-in-tanzania",

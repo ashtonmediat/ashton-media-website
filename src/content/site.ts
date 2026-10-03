@@ -45,7 +45,7 @@ export type City = {
 
 // Only places with confirmed inventory are listed.
 export const cities: City[] = [
-  { name: "Dar es Salaam", slug: "dar-es-salaam", note: "Head office, the largest share of the network, the international airport and Mlimani City" },
+  { name: "Dar es Salaam", slug: "dar-es-salaam", note: "The largest share of the network, the international airport, the SGR terminal and the major malls" },
   { name: "Zanzibar", slug: "zanzibar", note: "Digital screens" },
   { name: "Dodoma", slug: "dodoma", note: "Digital screens in the capital" },
   { name: "Mwanza", slug: "mwanza", note: "Digital screens on the lake" },
@@ -103,10 +103,10 @@ export const awards: Award[] = [
 ];
 
 export const timeline = [
-  { when: "2005", what: "Ashton Media founded in Dar es Salaam." },
+  { when: "2005", what: "Ashton Media founded in Tanzania." },
   { when: "2018", what: "DailyDOOH Gala Award, London — Most Innovative Use of Technology, for the 3D Digital Coke Bottle." },
   { when: "2023", what: "Consumer Choice Awards Africa — Most Creative and Convenient Digital Advertising (Billboard) Company in Tanzania." },
-  { when: "January 2024", what: "Tanzania's first 3D screen goes live at the main entrance of Mlimani City, with four UHD screens inside the mall." },
+  { when: "January 2024", what: "Tanzania's first 3D screen goes live at the entrance of one of Dar es Salaam's biggest malls, with four UHD screens inside." },
   { when: "March 2024", what: "KFC's Countdown to Iftar: live, data-driven countdowns across the digital network during Ramadan." },
   { when: "April 2024", what: "Chole Junction, Masaki, upgraded to a larger screen." },
   { when: "July 2024", what: "Pepsi's new logo launched on a combined static and digital build." },

@@ -8,7 +8,7 @@ import { site, timeline, awards, clients } from "@/content/site";
 export const metadata = pageMeta({
   title: "About Ashton Media | Out-of-Home Advertising in Tanzania",
   description:
-    "Ashton Media is an award-winning out-of-home media owner in Dar es Salaam: the largest digital screen network in Tanzania, static billboards, airport and mall advertising.",
+    "Ashton Media is an award-winning out-of-home media owner: Tanzania's largest digital screen network, static billboards, airport, SGR and mall advertising, for brands at home and from abroad.",
   path: "/about/",
   image: "/og/about.jpg",
 });
@@ -23,10 +23,10 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <h1 className="display text-[2.4rem] sm:text-5xl lg:text-6xl">Putting brands in front of Tanzania</h1>
               <p className="measure-wide mt-6 text-lg text-white/85">
-                Ashton Media Limited is an award-winning out-of-home media owner based in Dar es Salaam. It runs the
-                country’s largest digital screen network alongside static billboards,
-                airport advertising, and the screens at Mlimani City. One team handles sites, permits, production,
-                installation and reporting.
+                Ashton Media Limited is an award-winning out-of-home media owner. It runs Tanzania’s largest
+                digital screen network alongside static billboards, airport and SGR advertising, and screens in the
+                major malls and retail spaces — for brands at home and for brands arriving from anywhere in the world.
+                One team handles sites, permits, production, installation and reporting.
               </p>
             </div>
           </div>

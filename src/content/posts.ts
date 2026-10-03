@@ -348,7 +348,7 @@ A new-to-market retailer needed its first store to feel like the global brand fr
 
 It sells at the moment of decision. The customer is already in the store with money in hand; the screen puts the offer in front of them at the counter, the pump or the aisle, and changes it by the hour if the business wants it to.`,
     partial: true,
-    related: [{ label: "Mall and retail advertising", href: "/mall-advertising-dar-es-salaam/" }],
+    related: [{ label: "Mall and retail advertising", href: "/mall-advertising-tanzania/" }],
   },
   {
     slug: "how-strategic-screen-placement-transforms-consumer-engagement-a-case-study-with-vodacom-tanzania",
@@ -376,7 +376,7 @@ The success of Vodacom Tanzania's campaign on our digital screen network undersc
 
 The introduction of our digital screen network at Mlimani City Mall, and its role in Vodacom's device-financing campaign, highlights the transformative potential of strategic screen placement in advertising. As we move forward, the integration of innovative technology and creative marketing strategies will continue to redefine how brands engage with consumers. For those looking to leave a lasting impression, the message is clear: where you place your story matters just as much as the story itself.`,
     related: [
-      { label: "Mall and retail advertising", href: "/mall-advertising-dar-es-salaam/" },
+      { label: "Mall and retail advertising", href: "/mall-advertising-tanzania/" },
       { label: "3D screens", href: "/3d-billboard-tanzania/" },
     ],
   },
@@ -407,7 +407,7 @@ In 2024 we step into the future with our state-of-the-art digital network. The f
 Unmatched visibility in frequently visited areas; engaging content through 3D and UHD technology; access to diverse demographics — families, young adults and professionals; and a place at the forefront of digital advertising innovation.`,
     related: [
       { label: "3D screens", href: "/3d-billboard-tanzania/" },
-      { label: "Mall and retail advertising", href: "/mall-advertising-dar-es-salaam/" },
+      { label: "Mall and retail advertising", href: "/mall-advertising-tanzania/" },
     ],
   },
 ];
