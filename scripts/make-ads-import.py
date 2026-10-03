@@ -71,7 +71,7 @@ NEW_ADS = {
          D_AWARD, D_BRIEF]),
     ("Ashton | International | 30-09-2026", "Advertising in Tanzania — international"): (
         ["Entering The Tanzanian Market?", "Advertising In Tanzania", "One Partner For Outdoor Media",
-         "Sites, Production, Installation", "Agencies & Global Brands", "Launch In Tanzania With Us"] + COMMON_H,
+         "Sites, Print And Installation", "Agencies & Global Brands", "Launch In Tanzania With Us"] + COMMON_H,
         ["Launching in Tanzania? One partner for sites, production and installation.",
          D_AWARD, D_FORMATS, D_BRIEF]),
     ("Ashton | Competitor names | 30-09-2026", "OOH competitors"): (
