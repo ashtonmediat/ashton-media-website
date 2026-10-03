@@ -34,6 +34,7 @@ PAUSE_IF_CONTAINS = [
     "#1 OOH Network in Tanzania|Out of Home Advertising TZ|plain",  # Outdoor: un-inserted duplicate of the {KeyWord} ad
     "Airport Billboard Advertising|plain",       # Airport: un-inserted duplicate of the {KeyWord} ad
     "Comparing Billboard Companies?",            # Competitor: replaced by the 15-headline version below
+    "Sites, Production & Permits",               # International: permits are an internal matter; two new ads replace it
 ]
 
 # ---- new copy (every headline ≤ 30, every description ≤ 90; checked below) ----------------
@@ -47,34 +48,39 @@ D_CITIES = "Sites in Dar es Salaam, Zanzibar, Dodoma and Mwanza. Production and 
 D_RATES = "No published rate card anywhere? Ours comes with sites and photos. WhatsApp or call now."
 D_PRICE = "Five things set the price: site, size, format, duration and production. See the guide."
 
-NEW_ADS = {
-    ("Ashton Core search", "billboards - General"): (
+NEW_ADS = [
+    (("Ashton Core search", "billboards - General"), (
         ["Billboard Advertising Tanzania", "Billboards In Tanzania", "Dar, Zanzibar, Dodoma, Mwanza",
          "Static Billboards Tanzania", "One Partner, Whole Network", "Advertise Now"] + COMMON_H,
-        [D_AWARD, D_FORMATS, D_BRIEF, D_CITIES]),
-    ("Ashton Core search", "Outdoor Advertising"): (
+        [D_AWARD, D_FORMATS, D_BRIEF, D_CITIES])),
+    (("Ashton Core search", "Outdoor Advertising"), (
         ["Outdoor Advertising Tanzania", "OOH Advertising Tanzania", "Out-Of-Home Media Owner",
          "Dar, Zanzibar, Dodoma, Mwanza", "One Partner, Whole Network", "Advertise Now"] + COMMON_H,
-        [D_AWARD, D_FORMATS, D_BRIEF, D_CITIES]),
-    ("Ashton Core search", "Digital Screens"): (
+        [D_AWARD, D_FORMATS, D_BRIEF, D_CITIES])),
+    (("Ashton Core search", "Digital Screens"), (
         ["Digital Billboards Tanzania", "LED Screens On Main Roads", "Change Artwork In Seconds",
          "Screens On Bagamoyo Road", "Screens At JNIA Terminal 3", "Live Data On Screen"] + COMMON_H,
         [D_AWARD,
          "Digital screens on Dar es Salaam's main roads, at the airport and in malls. One booking.",
          "Change the message in seconds, run dayparts, react to live data. Ask for the screen list.",
-         D_BRIEF]),
-    ("Ashton Core search", "Airport Advertising"): (
+         D_BRIEF])),
+    (("Ashton Core search", "Airport Advertising"), (
         ["Airport Advertising Tanzania", "JNIA Terminal 3 Screens", "Kilimanjaro & Arusha Airports",
          "Mwanza & Dodoma Airports", "Reach Travellers On Arrival", "Baggage Hall & Departures"] + COMMON_H,
         ["Airport advertising at JNIA Terminal 3, Kilimanjaro, Arusha, Mwanza and Dodoma airports.",
          "Digital totems and screens in arrivals, baggage halls and departures. Ask for the list.",
-         D_AWARD, D_BRIEF]),
-    ("Ashton | International | 30-09-2026", "Advertising in Tanzania — international"): (
+         D_AWARD, D_BRIEF])),
+    (("Ashton | International | 30-09-2026", "Advertising in Tanzania — international"), (
         ["Entering The Tanzanian Market?", "Advertising In Tanzania", "One Partner For Outdoor Media",
          "Sites, Print And Installation", "Agencies & Global Brands", "Launch In Tanzania With Us"] + COMMON_H,
         ["Launching in Tanzania? One partner for sites, production and installation.",
-         D_AWARD, D_FORMATS, D_BRIEF]),
-    ("Ashton | Competitor names | 30-09-2026", "OOH competitors"): (
+         D_AWARD, D_FORMATS, D_BRIEF])),
+    (("Ashton | International | 30-09-2026", "Advertising in Tanzania — international"), (
+        ["Advertising In Tanzania", "Launching In Tanzania?", "One Partner On The Ground",
+         "Sites, Print And Installation", "Agencies & Global Brands", "Quote In US Dollars"] + COMMON_H,
+        ["Entering Tanzania? One partner for sites, production and installation, with proof when live.",
+         D_FORMATS, D_AWARD, D_BRIEF])),
+    (("Ashton | Competitor names | 30-09-2026", "OOH competitors"), (
         ["Comparing Billboard Companies?", "Call Our Team Today", "Compare Before You Book",
          "Get Our Rate Card Today", "Digital & Static Billboards", "Airport & Highway Sites",
          "Same-Day Quote By WhatsApp", "Prime Locations Citywide", "Book A Site Visit",
@@ -83,16 +89,16 @@ NEW_ADS = {
         ["Before you book elsewhere, compare our network: more sites, prime spots, one rate card.",
          "Digital, static and airport billboards across Tanzania. Call for a same-day quote today.",
          "Tap to call or WhatsApp us for the rate card, locations and availability within the hour.",
-         D_AWARD]),
-    ("Leads-Search-Ashton Media- Branded- 24-05-25", "Branded Keywords"): (
+         D_AWARD])),
+    (("Leads-Search-Ashton Media- Branded- 24-05-25", "Branded Keywords"), (
         ["Ashton Media Tanzania", "Ashton Media – Official Site", "Out-Of-Home Media Owner",
          "Head Office: New Bagamoyo Road", "See Our Awards", "Campaign Stories On The Blog"] + COMMON_H,
-        [D_AWARD, D_FORMATS, D_BRIEF, D_CITIES]),
-    ("Ashton Core search", "Rates & cost"): (
+        [D_AWARD, D_FORMATS, D_BRIEF, D_CITIES])),
+    (("Ashton Core search", "Rates & cost"), (
         ["Billboard Advertising Cost", "What A Billboard Costs", "Billboard Rates In Tanzania",
          "Rates And How To Book", "Five Things Set The Price", "Advertise Now"] + COMMON_H,
-        [D_PRICE, D_RATES, D_BRIEF, D_FORMATS]),
-}
+        [D_PRICE, D_RATES, D_BRIEF, D_FORMATS])),
+]
 KEYWORDS = ["billboard advertising cost", "billboard cost tanzania", "digital billboard cost", "billboard rental cost",
             "billboard rates", "billboard rates tanzania", "billboard prices tanzania", "advertising rate card",
             "cost of billboard advertising", "how much does a billboard cost", "billboard advertising prices",
@@ -107,7 +113,7 @@ SITELINKS = [
 ]
 
 # ---- checks -----------------------------------------------------------------------------
-for key, (hs, ds) in NEW_ADS.items():
+for key, (hs, ds) in NEW_ADS:
     assert len(hs) == 15 and len(set(hs)) == 15, (key, len(hs), len(set(hs)))
     assert len(ds) == 4 and len(set(ds)) == 4, key
     for h in hs: assert len(h) <= 30, (key, h, len(h))
@@ -173,7 +179,7 @@ for kw in KEYWORDS:
 
 # new ads
 new = 0
-for key, (hs, ds) in NEW_ADS.items():
+for key, (hs, ds) in NEW_ADS:
     url, p1, p2 = LANDING.get(key, (gurl, gp1, gp2))
     row = {c: "" for c in COLUMNS}
     row.update({"Campaign": key[0], "Ad Group": key[1], "Final URL": url, "Path 1": p1, "Path 2": p2,
