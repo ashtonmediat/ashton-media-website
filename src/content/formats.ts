@@ -98,7 +98,7 @@ export const formats: FormatPage[] = [
       { q: "Is printing included in the price?", a: "We quote the whole job — site, print, installation and posting — so you see one number. Tell us if you already have print and we will quote the site alone." },
       { q: "What is the minimum booking period?", a: "It depends on the site. Tell us your dates and we will say what is possible." },
       { q: "Can I combine static billboards with digital screens?", a: "Yes, and most brand campaigns do. A static site holds the message all day; the digital screens on the same route add motion, timing and change." },
-      { q: "Do you handle permits and installation?", a: "Yes. Our own team handles the site, the production and the installation end to end." },
+      { q: "Do you handle printing and installation?", a: "Yes. Our own team handles the site, the production and the installation end to end." },
     ],
     cta: { label: "Request the static site list", whatsapp: "Hi Ashton Media, please send the static billboard site list and rates." },
   },
@@ -246,7 +246,7 @@ export const formats: FormatPage[] = [
       {
         heading: "How it is booked",
         body: [
-          "Tell us the dates, the places and the hours. We plan the route, handle the permits and the crew, and send photographs from each stop.",
+          "Tell us the dates, the places and the hours. We plan the route and the crew, and send photographs from each stop.",
         ],
       },
     ],

@@ -24,7 +24,7 @@ const faqs = [
   { q: "Do you offer digital billboards?", a: "Yes. Ashton runs Tanzania's largest digital out-of-home network — Selander Bridge, Chole Junction, Nyerere Road and Bagamoyo Road among them — plus the airports, the SGR terminals and the major malls." },
   { q: "Can you handle printing and installation?", a: "Yes. For static sites we quote the whole job: site, print, installation and a photograph of the posting." },
   { q: "How do I book a billboard?", a: "Send a two-minute brief on this site, WhatsApp us, or call +255 758 880 088. We reply with the sites that fit, photographs and a quote." },
-  { q: "Do you work with international brands and agencies?", a: "Yes. International brands enter Tanzania through us because one team handles sites, production, permits and installation. Coca-Cola, Pepsi, Samsung, Apple, Vodacom, TECNO, KFC, Bolt and Yas have all run campaigns on the network." },
+  { q: "Do you work with international brands and agencies?", a: "Yes. International brands enter Tanzania through us because one team handles sites, production and installation. Coca-Cola, Pepsi, Samsung, Apple, Vodacom, TECNO, KFC, Bolt and Yas have all run campaigns on the network." },
   { q: "Can I see photographs of the sites before booking?", a: "Yes. Every proposal comes with photographs and locations." },
 ];
 

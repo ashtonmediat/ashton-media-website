@@ -26,7 +26,6 @@ export default function AboutPage() {
                 Ashton Media Limited is an award-winning out-of-home media owner. It runs Tanzania’s largest
                 digital screen network alongside static billboards, airport and SGR advertising, and screens in the
                 major malls and retail spaces — for brands at home and for brands arriving from anywhere in the world.
-                One team handles sites, permits, production, installation and reporting.
               </p>
             </div>
           </div>

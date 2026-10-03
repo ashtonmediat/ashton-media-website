@@ -12,16 +12,15 @@ import { getPost } from "@/content/posts";
 export const metadata = pageMeta({
   title: "Advertising in Tanzania for International Brands | Ashton",
   description:
-    "Entering Tanzania? One partner for billboards, digital screens, airports, SGR and malls: sites, production, permits and installation handled by our own team on the ground.",
+    "Entering Tanzania? One partner for billboards, digital screens, airports, SGR and malls: sites, production and installation handled by our own team on the ground.",
   path: "/advertising-in-tanzania/",
   image: "/og/advertising-in-tanzania.jpg",
 });
 
 const faqs = [
-  { q: "How do I advertise in Tanzania from abroad?", a: "Send us a brief with the objective, the cities and the dates. We propose sites with photographs and a quote, handle production, permits and installation locally, and send proof when the campaign is live. Many international brands have launched this way." },
+  { q: "How do I advertise in Tanzania from abroad?", a: "Send us a brief with the objective, the cities and the dates. We propose sites with photographs and a quote, handle production and installation locally, and send proof when the campaign is live. Many international brands have launched this way." },
   { q: "Which cities should a national campaign cover?", a: "Dar es Salaam carries the largest audience and most decision makers. Dodoma is the capital, Mwanza the second city and Zanzibar the tourism economy. We will recommend a mix for the budget." },
   { q: "Can you quote in US dollars?", a: "Yes." },
-  { q: "Do you handle permits and local regulations?", a: "Yes. Ashton Media handles permits, production and installation as part of the job." },
   { q: "Can one brand own the arrivals at the airport?", a: "Yes. A single brand can take the whole arrivals route at Julius Nyerere International Airport, or the route can be shared by zone." },
   { q: "What time zone are you in?", a: "East Africa Time, UTC+3. Send a brief at any hour and it is answered when the office opens; WhatsApp is the fastest route." },
 ];
@@ -39,8 +38,8 @@ export default function InternationalPage() {
               <h1 className="display text-[2.4rem] sm:text-5xl lg:text-6xl">Advertising in Tanzania, handled by one partner</h1>
               <p className="measure-wide mt-6 text-lg text-white/85">
                 For brands and agencies entering Tanzania, Ashton is the media owner that does the whole job:
-                the sites, the production, the permits, the installation and the reporting. The largest digital screen
-                network in the country, static billboards, the international airport and the busiest mall.
+                the sites, the production, the installation and the reporting. The largest digital screen
+                network in the country, static billboards, the airports, the SGR terminals and the major malls.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link href="/plan-a-campaign/" className="btn btn-outline-white">Brief us</Link>
@@ -57,7 +56,7 @@ export default function InternationalPage() {
             <div className="lg:col-span-8">
               <h2 className="display-md text-2xl md:text-3xl">What you get from one brief</h2>
               <div className="mt-6 space-y-4">
-                <p className="measure-wide">A plan with the sites that fit — photographs, locations, formats — and one quote for the whole campaign, in dollars if you prefer. Production and installation are done by our own team on the ground in Tanzania, permits included.</p>
+                <p className="measure-wide">A plan with the sites that fit — photographs, locations, formats — and one quote for the whole campaign, in dollars if you prefer. Production and installation are done by our own team on the ground in Tanzania.</p>
                 <p className="measure-wide">A launch can own the arrivals at the international airports, the main junctions of Dar es Salaam and the entrances of the major malls in the same week, then carry on upcountry on the digital network and at the SGR terminals.</p>
                 <p className="measure-wide">Proof when it is live: photographs of every static posting and proof of play for every screen.</p>
               </div>
@@ -81,7 +80,7 @@ export default function InternationalPage() {
                   <li><strong>The largest digital screen network</strong> in Tanzania</li>
                   <li><strong>Airports and rail</strong> — JNIA, Kilimanjaro, Arusha, Mwanza, Dodoma and the SGR terminals</li>
                   <li><strong>Tanzania’s first 3D screen</strong></li>
-                  <li><strong>Permits, production and installation</strong> by our own team</li>
+                  <li><strong>Production and installation</strong> by our own team</li>
                 </ul>
                 <div className="mt-5 grid gap-3">
                   <Link href="/awards/" className="btn btn-outline">See the awards</Link>
